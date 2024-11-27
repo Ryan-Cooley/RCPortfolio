@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game Code</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <h1>Snake Game Code</h1>
+    <pre>
+        <code>
+            # Snake Game
+
+            from turtle import Screen
+            from snake_game_classes import *
+            import time
+
+            screen = Screen()
+            screen.setup(width=600, height=600)
+            screen.bgcolor("black")
+            screen.title("Snake")
+            screen.tracer(0)
+
+            box = Turtle()
+            box.color("white")
+            box.penup()
+            box.hideturtle()
+            box.goto(-305, -300)
+            box.pendown()
+            box.pensize(30)  # Set the pen size for better visibility
+            box.fillcolor("black")  # Set the fill color to black
+
+            box.begin_fill()
+            box.left(90)
+            box.forward(605)
+            box.right(90)
+            box.forward(600)
+            box.end_fill()
+
+            snake = Snake()
+            food = Food()
+            scoring = Scoring()
+
+            screen.listen()
+            screen.onkey(snake.up, "Up")
+            screen.onkey(snake.down, "Down")
+            screen.onkey(snake.left, "Left")
+            screen.onkey(snake.right, "Right")
+
+            game= True
+            while game:
+                screen.update()
+                time.sleep(.1)
+                snake.move()
+
+                # Food Collisions
+                if snake.head.distance(food) < 15:
+                    food.new_place()
+                    snake.longer()
+                    scoring.add_to_score()
+
+                # Wall Collision
+                if (
+                    snake.head.xcor() > 280 #CORRECT
+                    or snake.head.xcor() < -280
+                    or snake.head.ycor() > 280
+                    or snake.head.ycor() < -280 #CORRECT
+                ):
+                    game = False
+                    break
+
+                # Tail Collision
+                for seg in snake.segs[1:]:
+                    if snake.head.distance(seg) < 10:
+                        game = False
+                        break
+
+            scoring.game_over()
+            screen.exitonclick()
+
+            #Snake Game Classes
+
+            from turtle import Turtle
+            import random
+
+            start = [(0, 0), (-20, 0), (-40, 0)]
+            MOVING = 20
+            UP = 90
+            DOWN = 270
+            LEFT = 180
+            RIGHT = 0
+
+            class Snake:
+
+                def __init__(self):
+                    self.segs = []
+                    self.make_snake()
+                    self.head = self.segs[0]
+
+                def make_snake(self):
+                    for pos in start:
+                        self.add_seg(pos)
+
+                def add_seg(self, pos):
+                    seg = Turtle("square")
+                    seg.color("light blue")
+                    seg.penup()
+                    seg.goto(pos)
+                    self.segs.append(seg)
+
+                def longer(self):
+                    """Make the snake one segment longer"""
+                    self.add_seg(self.segs[-1].pos())
+
+
+                def move(self):
+                    for i in range(len(self.segs) - 1, 0, -1):
+                        x, y = self.segs[i - 1].position()
+                        self.segs[i].goto(x, y)
+                    
+                    self.head.forward(MOVING)
+
+                def up(self):
+                    if self.head.heading() != DOWN:
+                        self.head.setheading(UP)
+
+                def left(self):
+                    if self.head.heading() != RIGHT:
+                        self.head.setheading(LEFT)
+
+                def down(self):
+                    if self.head.heading() != UP:
+                        self.head.setheading(DOWN)
+
+                def right(self):
+                    if self.head.heading() != LEFT:
+                        self.head.setheading(RIGHT)
+
+
+
+            class Food(Turtle):
+                def __init__(self):
+                    super().__init__()
+                    self.shape("circle")
+                    self.penup()
+                    self.shapesize(stretch_len=0.5, stretch_wid=0.5)
+                    self.color("red")
+                    self.speed("fastest")
+                    self.new_place()
+
+                def new_place(self):
+                    rx = random.randint(-280, 280)
+                    ry = random.randint(-280, 280)
+                    self.goto(rx, ry)
+
+
+            class Scoring(Turtle):
+                def __init__(self):
+                    super().__init__()
+                    self.score = 0
+                    self.color("white")
+                    self.penup()
+                    self.goto(0, -285)
+                    self.update_writing()
+                    self.hideturtle()
+
+                def update_writing(self):
+                    self.write(f"Score: {self.score}", align="center", 
+                    font=("Courier", 20, "normal"))
+
+                def add_to_score(self):
+                    self.clear()
+                    self.score += 1
+                    self.update_writing()
+
+                def game_over(self):
+                    self.goto(0, 0)
+                    self.color("white")
+                    self.write("GAME OVER :(", align="center", 
+                    font=("Courier", 30, "normal"))
+                    
+        </code>
+    </pre>
+    <a href="index.html" class="main-btn">Back to Portfolio</a>
+</body>
+</html>

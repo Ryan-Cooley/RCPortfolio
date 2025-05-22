@@ -185,7 +185,7 @@ section {
 
 .portfolio-category {
   flex-basis: 100%;
-  max-width: 80%;
+  /* max-width: 80%; */
   padding: 30px;
   box-sizing: border-box;
   text-align: center;
@@ -204,6 +204,8 @@ section {
   background: var(--color-white);
   text-align: center;
   color: var(--color-black);
+  max-width: 800px;
+  margin: 0 auto 2rem;
 }
 .portfolio-item .image {
   width: 100%;
@@ -212,7 +214,7 @@ section {
   margin-bottom: 20px;
 }
 .portfolio-item .image img {
-  max-width: 40%;
+  max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -229,6 +231,9 @@ section {
 }
 .portfolio-item .icons {
   margin-top: 20px;
+  display: flex;               /* make it a flex container */
+  justify-content: center;     /* center its children horizontally */
+  gap: 1rem;  
 }
 .portfolio-item .icons .main-btn {
   font-size: 1.1em;

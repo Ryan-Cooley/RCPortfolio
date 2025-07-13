@@ -107,30 +107,59 @@
                 <p>In this simulation, the TIP3P water box is visualized using VMD (Visual Molecular Dynamics), demonstrating how water molecules interact in a confined space over time, providing insights into their behavior under different conditions.</p>
                 
                 <h2>Technical Details</h2>
-                <p>The files were generated using the OpenMM toolkit, a versatile platform for running molecular simulations, which provides the tools necessary to build, parameterize, and simulate molecular systems efficiently.</p>
+                <p>The simulation was generated using the OpenMM toolkit, a versatile platform for running molecular simulations, which provides the tools necessary to build, parameterize, and simulate molecular systems efficiently.</p>
                 
-                <h3>File Components:</h3>
+                <h3>Simulation Components:</h3>
                 <ul>
-                    <li><strong>INPCRD File (Input Coordinates):</strong> This file contains the initial coordinates of all atoms in the system, defining the starting configuration for the simulation.</li>
-                    <li><strong>PRMTOP File (Parameter Topology):</strong> This file describes the molecular structure, including atomic properties, bonding information, and parameters needed to calculate forces and energies throughout the simulation. It serves as a blueprint for the molecular interactions.</li>
-                    <li><strong>Trajectory File (DCD):</strong> The trajectory file (`.dcd`) records the positions of all atoms over time during the simulation, allowing for visualization and analysis of how the system evolves.</li>
+                    <li><strong>Python Script:</strong> Custom Python code using OpenMM to set up and run the molecular dynamics simulation</li>
+                    <li><strong>Water Box Configuration:</strong> A cubic box containing TIP3P water molecules with periodic boundary conditions</li>
+                    <li><strong>Simulation Parameters:</strong> Temperature, pressure, and time step settings optimized for water dynamics</li>
+                    <li><strong>Trajectory Analysis:</strong> Visualization and analysis of molecular movements over time</li>
                 </ul>
+                
+                <h2>Analysis Results</h2>
+                <div class="project-image">
+                    <img src="tip3p/nearest_distances_histogram_waterbox.png" alt="Distance Analysis Results">
+                    <p><em>Histogram showing the distribution of nearest distances between water molecule oxygens, demonstrating the statistical analysis of molecular interactions.</em></p>
+                </div>
                 
                 <h2>Downloads</h2>
                 <div class="download-buttons">
-                    <a href="tip3p/waterbox1.inpcrd" download="tip3p/waterbox1.inpcrd" class="main-btn">
-                        <span class="btn-text">Download inpcrd File</span>
+                    <a href="tip3p_molecular_dynamics_simulation.py" download class="main-btn">
+                        <span class="btn-text">Molecular Dynamics Simulation</span>
                         <span class="btn-icon"><i class="fas fa-download"></i></span>
                     </a>
-                    <a href="tip3p/waterbox1.prmtop" download="tip3p/waterbox1.prmtop" class="main-btn">
-                        <span class="btn-text">Download prmtop File</span>
+                    <a href="tip3p_water_box_setup.leap" download class="main-btn">
+                        <span class="btn-text">Water Box Setup (Leap)</span>
                         <span class="btn-icon"><i class="fas fa-download"></i></span>
                     </a>
-                    <a href="https://drive.google.com/file/d/1p34ADGMuDSNN1pTgAfdsIMDgF17JHDrk/view?usp=sharing" class="main-btn" target="_blank">
-                        <span class="btn-text">Download Trajectory File</span>
+                    <a href="tip3p_distance_analysis.py" download class="main-btn">
+                        <span class="btn-text">Distance Analysis</span>
+                        <span class="btn-icon"><i class="fas fa-download"></i></span>
+                    </a>
+                    <a href="tip3p_periodic_boundary_analysis.py" download class="main-btn">
+                        <span class="btn-text">Periodic Boundary Analysis</span>
+                        <span class="btn-icon"><i class="fas fa-download"></i></span>
+                    </a>
+                    <a href="tip3p_data_visualization.py" download class="main-btn">
+                        <span class="btn-text">Data Visualization</span>
                         <span class="btn-icon"><i class="fas fa-download"></i></span>
                     </a>
                 </div>
+                
+                <h2>How to Run</h2>
+                <p>To run the molecular dynamics simulation:</p>
+                <ol>
+                    <li>Download all the Python scripts and Leap file</li>
+                    <li>Install required packages: <code>pip install openmm parmed numpy matplotlib mdtraj</code></li>
+                    <li>Set up the water box: <code>tleap -f tip3p_water_box_setup.leap</code></li>
+                    <li>Run the simulation: <code>python tip3p_molecular_dynamics_simulation.py</code></li>
+                    <li>Analyze results: <code>python tip3p_distance_analysis.py</code> and <code>python tip3p_periodic_boundary_analysis.py</code></li>
+                    <li>Generate visualizations: <code>python tip3p_data_visualization.py</code></li>
+                    <li>Use VMD or similar software to visualize the trajectory files</li>
+                </ol>
+                
+                <p><strong>Note:</strong> This simulation requires AmberTools for the Leap setup and OpenMM for the molecular dynamics simulation. The analysis demonstrates advanced scientific computing techniques including statistical analysis, data visualization, and molecular dynamics with periodic boundary conditions.</p>
             </div>
         </div>
     </div>

@@ -2,6 +2,16 @@
     // Hide page until ready
     document.body.style.opacity = '0';
     
+    // Prevent zoom on double-tap for mobile
+    let lastTouchEnd = 0;
+    document.addEventListener('touchend', function (event) {
+        const now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+        }
+        lastTouchEnd = now;
+    }, false);
+    
     // Navigation functionality
     [...document.querySelectorAll(".control")].forEach(button => {
         button.addEventListener("click", function() {
@@ -41,6 +51,9 @@
             if (modal) {
                 modal.style.display = "block";
                 document.body.style.overflow = "hidden"; // Prevent background scrolling
+                
+                // Reset modal scroll position to top
+                modal.scrollTop = 0;
                 
                 // Update URL to show we're in portfolio section
                 window.location.hash = "portfolio";

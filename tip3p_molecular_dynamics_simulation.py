@@ -44,7 +44,7 @@ simulation.reporters.append(DCDReporter('trajectory1.dcd', 1000))
 print("Reporters set for production run.")
 
 # Production run: Now the data is recorded
-production_steps = 10000000  # 200 ps of production
+production_steps = 10000000  # 20,000 ps (20 ns) of production
 print(f"Starting production run for {production_steps} steps...")
 simulation.step(production_steps)
 print("Production run complete.")

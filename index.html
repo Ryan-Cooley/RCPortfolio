@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#27AE60">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +25,6 @@
             </div>
             <div class="right-header">
                 <h1 class="name">
-                    <div style="height: 0.5em;"></div>
                     Hi, I'm <span>Ryan Cooley</span>
                 </h1>
                 <p>
@@ -63,7 +65,7 @@
             <h2>My <span>Portfolio</span></h2>
         </div>
         <p class="port-text">
-            Hover over the projects to see their titles, then click to learn more!
+            Hover over the projects and accomplishments to see their titles, then click to learn more!
         </p>
         <div class="portfolio-gallery">
             <div class="portfolio-item" data-project="tip3p">
@@ -77,10 +79,37 @@
             </div>
             <div class="portfolio-item" data-project="snake">
                 <div class="image">
-                    <img src="img/snake1.jpg" alt="Snake Game">
+                    <img src="img/snake_image.png" alt="Snake Game">
                     <div class="hover-overlay">
                         <h3>Snake Game</h3>
                         <p>Python Programming</p>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-project="sushigo">
+                <div class="image">
+                    <img src="img/sushi_go.jpg" alt="Sushi Go Card Game">
+                    <div class="hover-overlay">
+                        <h3>Sushi Go Card Game</h3>
+                        <p>C++ Programming</p>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-project="pcep">
+                <div class="image">
+                    <img src="img/PCEP Certification.jpg" alt="PCEP Certification">
+                    <div class="hover-overlay">
+                        <h3>PCEP Certification</h3>
+                        <p>Python Certification</p>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-project="hamradio">
+                <div class="image">
+                    <img src="img/HamRadioConfirmation.jpg" alt="Ham Radio Technician License">
+                    <div class="hover-overlay">
+                        <h3>Ham Radio Technician License</h3>
+                        <p>FCC License</p>
                     </div>
                 </div>
             </div>
@@ -102,25 +131,26 @@
             
             <div class="project-description">
                 <h2>Project Overview</h2>
-                <p>The TIP3P water box simulation is a molecular dynamics model that simulates the behavior and movement of water molecules using the TIP3P (Transferable Intermolecular Potential with 3 Points) model. This model is widely used in computational chemistry because of its efficiency and reasonable accuracy in representing water's physical properties.</p>
+                <p>This simulation models the behavior of water molecules using the TIP3P (Transferable Intermolecular Potential with 3 Points) model, which is widely used in computational chemistry due to its efficiency and reasonable accuracy in representing water’s physical properties.</p>
                 
-                <p>In this simulation, the TIP3P water box is visualized using VMD (Visual Molecular Dynamics), demonstrating how water molecules interact in a confined space over time, providing insights into their behavior under different conditions.</p>
+                <p>The TIP3P water box is visualized using VMD (Visual Molecular Dynamics), showcasing how water molecules interact within a confined space over time. This provides insight into their behavior under realistic, periodic conditions.</p>
                 
                 <h2>Technical Details</h2>
-                <p>The simulation was generated using the OpenMM toolkit, a versatile platform for running molecular simulations, which provides the tools necessary to build, parameterize, and simulate molecular systems efficiently.</p>
+                <p>The simulation was built and run using the OpenMM toolkit, a powerful engine for molecular simulations. System setup was performed using AmberTools, and custom Python scripts were developed for analysis and visualization.</p>
                 
                 <h3>Simulation Components:</h3>
                 <ul>
-                    <li><strong>Python Script:</strong> Custom Python code using OpenMM to set up and run the molecular dynamics simulation</li>
-                    <li><strong>Water Box Configuration:</strong> A cubic box containing TIP3P water molecules with periodic boundary conditions</li>
-                    <li><strong>Simulation Parameters:</strong> Temperature, pressure, and time step settings optimized for water dynamics</li>
-                    <li><strong>Trajectory Analysis:</strong> Visualization and analysis of molecular movements over time</li>
+                    <li><strong>Water Box Setup (Leap):</strong> AmberTools script to generate a TIP3P water box with periodic boundary conditions</li>
+                    <li><strong>Molecular Dynamics Simulation:</strong> OpenMM Python script with energy minimization, equilibration, and production phases</li>
+                    <li><strong>Distance Analysis:</strong> MDTraj-based Python script to compute nearest-neighbor distances between water oxygens</li>
+                    <li><strong>Periodic Boundary Analysis:</strong> Extended distance analysis accounting for periodic boundary conditions</li>
+                    <li><strong>Data Visualization:</strong> Python script to generate histograms and plots using NumPy and Matplotlib</li>
                 </ul>
                 
                 <h2>Analysis Results</h2>
                 <div class="project-image">
                     <img src="tip3p/nearest_distances_histogram_waterbox.png" alt="Distance Analysis Results">
-                    <p><em>Histogram showing the distribution of nearest distances between water molecule oxygens, demonstrating the statistical analysis of molecular interactions.</em></p>
+                    <p><em>Histogram of nearest-neighbor distances between water oxygens, illustrating the molecular spacing and statistical distribution.</em></p>
                 </div>
                 
                 <h2>Downloads</h2>
@@ -150,16 +180,27 @@
                 <h2>How to Run</h2>
                 <p>To run the molecular dynamics simulation:</p>
                 <ol>
-                    <li>Download all the Python scripts and Leap file</li>
+                    <li>Download all Python scripts and the Leap file</li>
                     <li>Install required packages: <code>pip install openmm parmed numpy matplotlib mdtraj</code></li>
                     <li>Set up the water box: <code>tleap -f tip3p_water_box_setup.leap</code></li>
                     <li>Run the simulation: <code>python tip3p_molecular_dynamics_simulation.py</code></li>
                     <li>Analyze results: <code>python tip3p_distance_analysis.py</code> and <code>python tip3p_periodic_boundary_analysis.py</code></li>
                     <li>Generate visualizations: <code>python tip3p_data_visualization.py</code></li>
-                    <li>Use VMD or similar software to visualize the trajectory files</li>
+                    <li>Visualize trajectory using VMD or similar software</li>
                 </ol>
                 
-                <p><strong>Note:</strong> This simulation requires AmberTools for the Leap setup and OpenMM for the molecular dynamics simulation. The analysis demonstrates advanced scientific computing techniques including statistical analysis, data visualization, and molecular dynamics with periodic boundary conditions.</p>
+                <h2>Simulation Details</h2>
+                <ul>
+                    <li><strong>Temperature:</strong> 300 K (room temperature)</li>
+                    <li><strong>Integration:</strong> Langevin dynamics with 1/ps friction</li>
+                    <li><strong>Time Step:</strong> 0.002 ps (2 femtoseconds)</li>
+                    <li><strong>Equilibration:</strong> 100 ps (50,000 steps)</li>
+                    <li><strong>Production:</strong> 20,000 ps (10,000,000 steps)</li>
+                    <li><strong>Periodic Boundary Conditions:</strong> PME (Particle Mesh Ewald) method</li>
+                    <li><strong>Non-bonded Cutoff:</strong> 1.0 nanometer</li>
+                </ul>
+                
+                <p><strong>Note:</strong> This project showcases modern scientific computing, including molecular simulation, data analysis, and statistical visualization — all conducted using open-source tools like OpenMM, AmberTools, MDTraj, and Matplotlib.</p>
             </div>
         </div>
     </div>
@@ -173,55 +214,197 @@
             </div>
             
             <div class="project-image">
-                <img src="img/snake1.jpg" alt="Snake Game">
+                <img src="img/snake_image.png" alt="Snake Game">
             </div>
             
             <div class="project-description">
                 <h2>Project Overview</h2>
-                <p>A simple Python game where the player controls a snake to collect food, growing longer with each item collected. Avoid hitting the walls or yourself!</p>
+                <p>A classic Snake game implemented in Python with the <code>turtle</code> graphics library. Guide your snake to eat food, grow longer, and rack up points—while steering clear of walls and your own tail!</p>
                 
-                <p>This project was inspired by Angela Yu's <em>100 Days of Code: The Complete Python Pro Bootcamp</em> and demonstrates fundamental programming concepts including:</p>
+                <p>Inspired by Angela Yu’s <em>100 Days of Code: The Complete Python Pro Bootcamp</em>, this project showcases key programming principles:</p>
                 
                 <ul>
-                    <li><strong>Object-Oriented Programming:</strong> Using classes to organize game logic</li>
-                    <li><strong>Event Handling:</strong> Processing keyboard input for movement</li>
-                    <li><strong>Game Loop:</strong> Managing game state and rendering</li>
-                    <li><strong>Collision Detection:</strong> Checking for wall and self collisions</li>
-                    <li><strong>Score Tracking:</strong> Keeping track of food collected</li>
+                    <li><strong>Object-Oriented Design:</strong> Encapsulate game elements in reusable classes</li>
+                    <li><strong>Event Handling:</strong> Capture and respond to keyboard input for smooth movement</li>
+                    <li><strong>Main Game Loop:</strong> Continuously update and render game state</li>
+                    <li><strong>Collision Detection:</strong> Detect and handle collisions with walls or the snake itself</li>
+                    <li><strong>Score Management:</strong> Track and display your current score in real time</li>
                 </ul>
                 
-                <h2>Two Versions Available</h2>
-                <p>I've created two versions of the Snake game to demonstrate different programming approaches:</p>
+                <h2>Project Structure</h2>
+                <p>The codebase is split into two modules for clarity and maintainability:</p>
                 
-                <h3>Basic Version (snake.py)</h3>
-                <p>A straightforward implementation using basic Python concepts and the turtle graphics library. This version is perfect for understanding the core game mechanics.</p>
+                <h3>Main Game File (<code>snake.py</code>)</h3>
+                <p>Entry point to launch the game, containing:</p>
+                <ul>
+                    <li>Setup of the game window and turtle environment</li>
+                    <li>The primary game loop for movement, rendering, and timing</li>
+                    <li>Collision checks and game-over logic</li>
+                    <li>High-score display and reset handling</li>
+                </ul>
                 
-                <h3>Class-Based Version (snake_game_classes.py)</h3>
-                <p>A more advanced implementation using object-oriented programming principles. This version demonstrates better code organization and reusability.</p>
+                <h3>Classes Module (<code>snake_game_classes.py</code>)</h3>
+                <p>Defines the core game objects:</p>
+                <ul>
+                    <li><strong>Snake:</strong> Manages body segments, directional movement, and self-collision checks</li>
+                    <li><strong>Food:</strong> Randomly places food items on the screen and handles respawning</li>
+                    <li><strong>ScoreBoard:</strong> Keeps track of and renders the player’s score at the top of the screen</li>
+                </ul>
                 
                 <h2>Downloads</h2>
                 <div class="download-buttons">
                     <a href="snake.py" download class="main-btn">
-                        <span class="btn-text">Download Basic Snake Game</span>
+                        <span class="btn-text">Download Main Game File</span>
                         <span class="btn-icon"><i class="fas fa-download"></i></span>
                     </a>
                     <a href="snake_game_classes.py" download class="main-btn">
-                        <span class="btn-text">Download Class-Based Snake Game</span>
+                        <span class="btn-text">Download Classes Module</span>
                         <span class="btn-icon"><i class="fas fa-download"></i></span>
                     </a>
                 </div>
                 
                 <h2>How to Run</h2>
-                <p>To run either version of the game:</p>
+                <p>To start playing:</p>
                 <ol>
-                    <li>Download the Python file</li>
-                    <li>Make sure you have Python installed on your system</li>
-                    <li>Open a terminal/command prompt</li>
-                    <li>Navigate to the directory containing the file</li>
-                    <li>Run: <code>python snake.py</code> or <code>python snake_game_classes.py</code></li>
+                    <li>Download both <code>snake.py</code> and <code>snake_game_classes.py</code></li>
+                    <li>Ensure you have Python 3 installed</li>
+                    <li>Open a terminal or command prompt</li>
+                    <li>Navigate to the folder containing the files</li>
+                    <li>Execute: <code>python snake.py</code></li>
                 </ol>
+                
+                <p><strong>Note:</strong> Both files are required—<code>snake.py</code> imports classes from <code>snake_game_classes.py</code>.</p>
+                <p><strong>Disclaimer:</strong> This game is a simple educational project and may have some quirks—such as food sometimes appearing near the edge, or the score being displayed at the top. For best results, run it in a standard Python environment with the <code>turtle</code> module installed.</p>
             </div>
         </div>
+    </div>
+
+    <div id="sushigo-modal" class="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="project-header">
+                <h1>Sushi Go Card Game</h1>
+                <p class="project-category">C++ Programming</p>
+            </div>
+            
+            <div class="project-image">
+                <img src="img/sushi_go.jpg" alt="Sushi Go Card Game">
+            </div>
+            
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>A console-based C++ implementation of the popular card game <em>Sushi Go!</em>, developed as part of a university programming course. This project demonstrates solid object-oriented design, robust game logic, and proficiency with C++ best practices.</p>
+
+                <h2>Technical Details</h2>
+                <p>Key programming concepts and techniques showcased:</p>
+                <ul>
+                    <li><strong>Object-Oriented Design:</strong> Well-structured classes for cards, players, and core game mechanics</li>
+                    <li><strong>Data Structures & Algorithms:</strong> Efficient shuffling and management of the deck, hands, and scoring data</li>
+                    <li><strong>Game Logic:</strong> Turn-based gameplay flow, card passing, round scoring, and win-condition evaluation</li>
+                    <li><strong>Console I/O:</strong> Text-based user interface for menu prompts, card selection, and real-time score feedback</li>
+                    <li><strong>Error Handling & Testing:</strong> Input validation, unit-style diff testing with sample decks, and memory safety checks</li>
+                </ul>
+
+                <h2>Learning Outcomes</h2>
+                <p>This academic assignment provided hands-on experience in:</p>
+                <ul>
+                    <li>Designing multiple interacting classes from a formal specification</li>
+                    <li>Implementing and validating complex game rules step by step</li>
+                    <li>Writing comprehensive tests using diff comparisons against demo outputs</li>
+                    <li>Documenting code contracts, adhering to style guidelines, and managing large-scale C++ projects</li>
+                </ul>
+
+                <p><em>Note: As this was submitted for a university course, detailed source code is not publicly available.</em></p>
+            </div>
+        </div>
+    </div>
+    <div id="pcep-modal" class="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="project-header">
+                <h1>PCEP Certification</h1>
+                <p class="project-category">Python Certification</p>
+            </div>
+            
+            <div class="project-image">
+                <img src="img/PCEP Certification.jpg" alt="PCEP Certification">
+            </div>
+            
+            <div class="project-description">
+                <h2>Certification Overview</h2>
+                <p>The PCEP (Certified Entry-Level Python Programmer) certification is a professional credential that validates fundamental Python programming skills. This certification demonstrates proficiency in Python syntax, data types, control structures, and basic programming concepts.</p>
+                
+                <h2>What PCEP Covers</h2>
+                <p>The PCEP certification validates knowledge in:</p>
+                
+                <ul>
+                    <li><strong>Python Fundamentals:</strong> Variables, data types, operators, and expressions</li>
+                    <li><strong>Control Structures:</strong> Conditional statements, loops, and flow control</li>
+                    <li><strong>Data Collections:</strong> Lists, tuples, dictionaries, and sets</li>
+                    <li><strong>Functions:</strong> Function definition, parameters, and return values</li>
+                    <li><strong>Exception Handling:</strong> Basic error handling and debugging</li>
+                    <li><strong>File Operations:</strong> Reading and writing files in Python</li>
+                </ul>
+                
+                <h2>Why This Matters</h2>
+                <p>Earning the PCEP certification demonstrates:</p>
+                
+                <ul>
+                    <li>Solid foundation in Python programming</li>
+                    <li>Commitment to professional development</li>
+                    <li>Industry-recognized programming skills</li>
+                    <li>Readiness for more advanced Python certifications</li>
+                </ul>
+                
+                <p>This certification serves as a stepping stone toward more advanced Python certifications like PCAP (Certified Associate in Python Programming) and PCPP (Certified Professional in Python Programming).</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="hamradio-modal" class="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="project-header">
+                <h1>Ham Radio Technician License</h1>
+                <p class="project-category">FCC License</p>
+            </div>
+            
+            <div class="project-image">
+                <img src="img/HamRadioConfirmation.jpg" alt="FCC Technician License Badge">
+            </div>
+            
+            <div class="project-description">
+                <h2>License Overview</h2>
+                <p>In 2025, I earned the FCC Amateur Radio Technician License to support my future role as Communications &amp; Ground Station Lead for the CubeSat Club. I'm currently researching ground-station hardware and studying uplink/downlink protocols in preparation for upcoming mission work.</p>
+                
+                <h2>What the Technician License Allows</h2>
+                <p>With this license, I'm qualified to:</p>
+                <ul>
+                    <li><strong>Operate on VHF/UHF Bands:</strong> Use frequencies above 30 MHz for local, regional, and satellite links</li>
+                    <li><strong>Employ Digital Modes:</strong> Experiment with packet radio, APRS, and other data-link techniques</li>
+                    <li><strong>Access Amateur Satellites:</strong> Plan for uplinking commands and downlinking telemetry from cubesats</li>
+                    <li><strong>Build &amp; Modify Equipment:</strong> Evaluate and assemble radio hardware within FCC guidelines</li>
+                </ul>
+                
+                <h2>Technical Knowledge Covered</h2>
+                <p>The Technician exam tested my understanding of:</p>
+                <ul>
+                    <li><strong>Radio Theory:</strong> Basic electronics, RF propagation, and antenna principles</li>
+                    <li><strong>Operating Procedures:</strong> Standard call signs, Q-codes, and on-air etiquette</li>
+                    <li><strong>FCC Regulations:</strong> Amateur service rules, frequency allocations, and licensing requirements</li>
+                    <li><strong>Safety Practices:</strong> Electrical safety, grounding, and RF exposure limits</li>
+                    <li><strong>Emergency Communications:</strong> Roles in public-service and disaster-response networks</li>
+                </ul>
+                
+                <h2>Next Steps for CubeSat Comms</h2>
+                <ul>
+                    <li>Researching antenna designs, transceiver modules, and ground-station software</li>
+                    <li>Evaluating uplink/downlink protocol standards and link-budget planning</li>
+                    <li>Collaborating with the team on frequency coordination and FCC compliance</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     </div>
 
     <div class="controls">

@@ -1,4 +1,5 @@
 # Snake Game
+# This code is for educational/demo purposes and is a simple implementation of the classic Snake game.
 
 from turtle import Screen
 from snake_game_classes import *
@@ -10,22 +11,6 @@ screen.bgcolor("black")
 screen.title("Snake")
 screen.tracer(0)
 
-box = Turtle()
-box.color("white")
-box.penup()
-box.hideturtle()
-box.goto(-305, -300)
-box.pendown()
-box.pensize(30)  # Set the pen size for better visibility
-box.fillcolor("black")  # Set the fill color to black
-
-box.begin_fill()
-box.left(90)
-box.forward(605)
-box.right(90)
-box.forward(600)
-box.end_fill()
-
 snake = Snake()
 food = Food()
 scoring = Scoring()
@@ -36,7 +21,7 @@ screen.onkey(snake.down, "Down")
 screen.onkey(snake.left, "Left")
 screen.onkey(snake.right, "Right")
 
-game= True
+game = True
 while game:
     screen.update()
     time.sleep(.1)
@@ -50,10 +35,10 @@ while game:
 
     # Wall Collision
     if (
-        snake.head.xcor() > 280 #CORRECT
-        or snake.head.xcor() < -280
-        or snake.head.ycor() > 280
-        or snake.head.ycor() < -280 #CORRECT
+        snake.head.xcor() > 285
+        or snake.head.xcor() < -285
+        or snake.head.ycor() > 285
+        or snake.head.ycor() < -285
     ):
         game = False
         break
@@ -65,5 +50,7 @@ while game:
             break
 
 scoring.game_over()
+scoring.score = 0
+scoring.update_writing()
 screen.exitonclick()
 

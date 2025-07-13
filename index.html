@@ -17,16 +17,16 @@
             <div class="left-header">
                 <div class="h-shape"></div>
                 <div class="image">
-                    <img src="img/ryan_pic.jpg" alt="">
+                    <img src="img/ryan_pic.jpg" alt="Ryan Cooley">
                 </div>
             </div>
             <div class="right-header">
                 <h1 class="name">
-    <div style="height: 0.5em;"></div>
-    Hi, I'm <span>Ryan Cooley</span>
-</h1>
+                    <div style="height: 0.5em;"></div>
+                    Hi, I'm <span>Ryan Cooley</span>
+                </h1>
                 <p>
-                    I’m currently pursuing a degree in Chemical Physics at Tufts 
+                    I'm currently pursuing a degree in Chemical Physics at Tufts 
                     University, where I conduct molecular simulations in the Ding 
                     Lab to better understand complex chemical systems. I also serve 
                     as the Communications and Ground Station Lead on the Tufts 
@@ -57,107 +57,146 @@
             </div>
         </div>
     </header>
-    <div style="height: 100px;"></div>
-    <main>
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-    <main>
-        <section class="container" id="portfolio">
-            <div class="main-title">
-                <h2>My <span>Portfolio</span></h2>
-            </div>
-            <p class="port-text">
-                Here are some of my projects I have worked on. Feel free to download the code and explore the projects further!
-            </p>
-            <div class="portfolios" style="display: flex; justify-content: center;">
-                <div class="portfolio-category" style="flex-basis: 100%;">
-                    <h3>Molecular Simulations</h3>
-                    <div class="portfolio-item">
-                        <div class="image" style="overflow: hidden;">
-                            <img src="tip3p/trajectory.gif" alt="TIP3P Water Box Trajectory" style="width: 100%; height: auto;">
-                        </div>
+
+    <section class="container" id="portfolio">
+        <div class="main-title">
+            <h2>My <span>Portfolio</span></h2>
+        </div>
+        <p class="port-text">
+            Hover over the projects to see their titles, then click to learn more!
+        </p>
+        <div class="portfolio-gallery">
+            <div class="portfolio-item" data-project="tip3p">
+                <div class="image">
+                    <img src="tip3p/trajectory.gif" alt="TIP3P Water Box Simulation">
+                    <div class="hover-overlay">
                         <h3>TIP3P Water Box Simulation</h3>
-<p>The TIP3P water box simulation is a molecular dynamics model that simulates the behavior and movement of water molecules using the TIP3P (Transferable Intermolecular Potential with 3 Points) model. This model is widely used in computational chemistry because of its efficiency and reasonable accuracy in representing water's physical properties. In this simulation, the TIP3P water box is visualized using VMD (Visual Molecular Dynamics), demonstrating how water molecules interact in a confined space over time, providing insights into their behavior under different conditions.</p>
-<br>
-<ul>
-    <li><strong>INPCRD File (Input Coordinates):</strong> This file contains the initial coordinates of all atoms in the system, defining the starting configuration for the simulation.</li>
-    <li><strong>PRMTOP File (Parameter Topology):</strong> This file describes the molecular structure, including atomic properties, bonding information, and parameters needed to calculate forces and energies throughout the simulation. It serves as a blueprint for the molecular interactions.</li>
-    <li><strong>Trajectory File (DCD):</strong> The trajectory file (`.dcd`) records the positions of all atoms over time during the simulation, allowing for visualization and analysis of how the system evolves.</li>
-</ul>
-<br>
-<p>The files were generated using the OpenMM toolkit, a versatile platform for running molecular simulations, which provides the tools necessary to build, parameterize, and simulate molecular systems efficiently.</p>
-                        <div class="icons">
-                            <a href="tip3p/waterbox1.inpcrd" download="tip3p/waterbox1.inpcrd" class="main-btn">
-                                <span class="btn-text">Download inpcrd File</span>
-                                <span class="btn-icon"><i class="fas fa-download"></i></span>
-                            </a>
-                            <a href="tip3p/waterbox1.prmtop" download="tip3p/waterbox1.prmtop" class="main-btn">
-                                <span class="btn-text">Download prmtop File</span>
-                                <span class="btn-icon"><i class="fas fa-download"></i></span>
-                            </a>
-                            <a href="https://drive.google.com/file/d/1p34ADGMuDSNN1pTgAfdsIMDgF17JHDrk/view?usp=sharing" class="main-btn" target="_blank">
-                                <span class="btn-text">Download Trajectory File</span>
-                                <span class="btn-icon"><i class="fas fa-download"></i></span>
-                            </a>
-                        </div>
+                        <p>Molecular Dynamics</p>
                     </div>
                 </div>
             </div>
-                
-                
-                <!-- Python Section -->
-                <div class="portfolio-category" style="flex-basis: 100%;">
-                    <h3>Python Projects</h3>
-                    <div class="portfolio-item" style="width: 80%; margin: auto;">
-                        <div class="image" style="overflow: hidden;">
-                            <img src="img/snake1.jpg" alt="Snake Game">
-                        </div>
+            <div class="portfolio-item" data-project="snake">
+                <div class="image">
+                    <img src="img/snake1.jpg" alt="Snake Game">
+                    <div class="hover-overlay">
                         <h3>Snake Game</h3>
-                        A simple Python game where the player controls a snake to collect food, growing longer with each item collected. 
-    Avoid hitting the walls or yourself! Inspired by Angela Yu’s 
-    <em>100 Days of Code: The Complete Python Pro Bootcamp</em>.
-                        <div class="icons">
-                            <a href="snake.py" download class="main-btn">
-                                <span class="btn-text">Download Snake Game Code</span>
-                                <span class="btn-icon"><i class="fas fa-download"></i></span>
-                            </a>
-                            <a href="snake_game_classes.py" download class="main-btn">
-                                <span class="btn-text">Download Snake Game Classes Code</span>
-                                <span class="btn-icon"><i class="fas fa-download"></i></span>
-                            </a>
-                        </div>
+                        <p>Python Programming</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Placeholder for adding more projects -->
-            <!-- #################################### -->
-            <!-- # Add more projects here in the same format as above # -->
-            <!-- #################################### -->
-
-            <br>
-            <br>
-            <br>
-            <div class="more-projects">
-                <h3>More Projects to Come...</h3>
-                <p>Stay tuned for more exciting molecular dynamics simulations and projects that explore the fascinating world of computational chemistry.</p>
+    <!-- Project Modals -->
+    <div id="tip3p-modal" class="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="project-header">
+                <h1>TIP3P Water Box Simulation</h1>
+                <p class="project-category">Molecular Dynamics</p>
             </div>
+            
+            <div class="project-image">
+                <img src="tip3p/trajectory.gif" alt="TIP3P Water Box Trajectory">
+            </div>
+            
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>The TIP3P water box simulation is a molecular dynamics model that simulates the behavior and movement of water molecules using the TIP3P (Transferable Intermolecular Potential with 3 Points) model. This model is widely used in computational chemistry because of its efficiency and reasonable accuracy in representing water's physical properties.</p>
+                
+                <p>In this simulation, the TIP3P water box is visualized using VMD (Visual Molecular Dynamics), demonstrating how water molecules interact in a confined space over time, providing insights into their behavior under different conditions.</p>
+                
+                <h2>Technical Details</h2>
+                <p>The files were generated using the OpenMM toolkit, a versatile platform for running molecular simulations, which provides the tools necessary to build, parameterize, and simulate molecular systems efficiently.</p>
+                
+                <h3>File Components:</h3>
+                <ul>
+                    <li><strong>INPCRD File (Input Coordinates):</strong> This file contains the initial coordinates of all atoms in the system, defining the starting configuration for the simulation.</li>
+                    <li><strong>PRMTOP File (Parameter Topology):</strong> This file describes the molecular structure, including atomic properties, bonding information, and parameters needed to calculate forces and energies throughout the simulation. It serves as a blueprint for the molecular interactions.</li>
+                    <li><strong>Trajectory File (DCD):</strong> The trajectory file (`.dcd`) records the positions of all atoms over time during the simulation, allowing for visualization and analysis of how the system evolves.</li>
+                </ul>
+                
+                <h2>Downloads</h2>
+                <div class="download-buttons">
+                    <a href="tip3p/waterbox1.inpcrd" download="tip3p/waterbox1.inpcrd" class="main-btn">
+                        <span class="btn-text">Download inpcrd File</span>
+                        <span class="btn-icon"><i class="fas fa-download"></i></span>
+                    </a>
+                    <a href="tip3p/waterbox1.prmtop" download="tip3p/waterbox1.prmtop" class="main-btn">
+                        <span class="btn-text">Download prmtop File</span>
+                        <span class="btn-icon"><i class="fas fa-download"></i></span>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1p34ADGMuDSNN1pTgAfdsIMDgF17JHDrk/view?usp=sharing" class="main-btn" target="_blank">
+                        <span class="btn-text">Download Trajectory File</span>
+                        <span class="btn-icon"><i class="fas fa-download"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        </section>
-    </main>
-</body>
-</html>
-
+    <div id="snake-modal" class="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="project-header">
+                <h1>Snake Game</h1>
+                <p class="project-category">Python Programming</p>
+            </div>
+            
+            <div class="project-image">
+                <img src="img/snake1.jpg" alt="Snake Game">
+            </div>
+            
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>A simple Python game where the player controls a snake to collect food, growing longer with each item collected. Avoid hitting the walls or yourself!</p>
+                
+                <p>This project was inspired by Angela Yu's <em>100 Days of Code: The Complete Python Pro Bootcamp</em> and demonstrates fundamental programming concepts including:</p>
+                
+                <ul>
+                    <li><strong>Object-Oriented Programming:</strong> Using classes to organize game logic</li>
+                    <li><strong>Event Handling:</strong> Processing keyboard input for movement</li>
+                    <li><strong>Game Loop:</strong> Managing game state and rendering</li>
+                    <li><strong>Collision Detection:</strong> Checking for wall and self collisions</li>
+                    <li><strong>Score Tracking:</strong> Keeping track of food collected</li>
+                </ul>
+                
+                <h2>Two Versions Available</h2>
+                <p>I've created two versions of the Snake game to demonstrate different programming approaches:</p>
+                
+                <h3>Basic Version (snake.py)</h3>
+                <p>A straightforward implementation using basic Python concepts and the turtle graphics library. This version is perfect for understanding the core game mechanics.</p>
+                
+                <h3>Class-Based Version (snake_game_classes.py)</h3>
+                <p>A more advanced implementation using object-oriented programming principles. This version demonstrates better code organization and reusability.</p>
+                
+                <h2>Downloads</h2>
+                <div class="download-buttons">
+                    <a href="snake.py" download class="main-btn">
+                        <span class="btn-text">Download Basic Snake Game</span>
+                        <span class="btn-icon"><i class="fas fa-download"></i></span>
+                    </a>
+                    <a href="snake_game_classes.py" download class="main-btn">
+                        <span class="btn-text">Download Class-Based Snake Game</span>
+                        <span class="btn-icon"><i class="fas fa-download"></i></span>
+                    </a>
+                </div>
+                
+                <h2>How to Run</h2>
+                <p>To run either version of the game:</p>
+                <ol>
+                    <li>Download the Python file</li>
+                    <li>Make sure you have Python installed on your system</li>
+                    <li>Open a terminal/command prompt</li>
+                    <li>Navigate to the directory containing the file</li>
+                    <li>Run: <code>python snake.py</code> or <code>python snake_game_classes.py</code></li>
+                </ol>
+            </div>
+        </div>
+    </div>
 
     <div class="controls">
-        <div class="control active-btn" data-id="home" >
+        <div class="control active-btn" data-id="home">
             <i class="fas fa-home"></i>
         </div>
         <div class="control" data-id="portfolio">

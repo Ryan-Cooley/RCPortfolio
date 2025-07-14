@@ -33,12 +33,12 @@ A molecular dynamics simulation using OpenMM and AmberTools, demonstrating scien
 - Complete workflow from setup to analysis
 
 **Files Included:**
-- `tip3p_molecular_dynamics_simulation.py` — Main simulation script
-- `tip3p_water_box_setup.leap` — Water box setup (AmberTools)
-- `tip3p_distance_analysis.py` — Nearest-neighbor distance analysis
-- `tip3p_periodic_boundary_analysis.py` — Periodic boundary analysis
-- `tip3p_data_visualization.py` — Data visualization and plotting
-- `tip3p/` — Output files and visualizations
+- `TIP3P_Water_Sim/tip3p_molecular_dynamics_simulation.py` — Main simulation script
+- `TIP3P_Water_Sim/tip3p_water_box_setup.leap` — Water box setup (AmberTools)
+- `TIP3P_Water_Sim/tip3p_distance_analysis.py` — Nearest-neighbor distance analysis
+- `TIP3P_Water_Sim/tip3p_periodic_boundary_analysis.py` — Periodic boundary analysis
+- `TIP3P_Water_Sim/tip3p_data_visualization.py` — Data visualization and plotting
+- `TIP3P_Water_Sim/simulation_output/` — Output files and visualizations
 
 ### 2. Snake Game
 A classic Snake game implemented in Python with the turtle graphics library.
@@ -50,8 +50,8 @@ A classic Snake game implemented in Python with the turtle graphics library.
 - Educational project demonstrating Python fundamentals
 
 **Files Included:**
-- `snake.py` — Main game file
-- `snake_game_classes.py` — Game classes module
+- `Snake_Game/snake.py` — Main game file
+- `Snake_Game/snake_game_classes.py` — Game classes module
 
 ### 3. VBA Data Processing Automation
 Professional automation project from Entegris internship.
@@ -106,12 +106,19 @@ RCPortfolio/
 │   └── _media.scss        # Responsive design
 ├── app.js                 # JavaScript functionality
 ├── img/                   # Project images and icons
-├── tip3p/                 # Molecular simulation files
-├── snake.py               # Snake game main file
-├── snake_game_classes.py  # Snake game classes
-├── tip3p_*.py            # Molecular simulation scripts
-├── tip3p_water_box_setup.leap
-└── Ryan_Cooley_Resume.pdf
+├── TIP3P_Water_Sim/
+│   ├── tip3p_molecular_dynamics_simulation.py
+│   ├── tip3p_water_box_setup.leap
+│   ├── tip3p_distance_analysis.py
+│   ├── tip3p_periodic_boundary_analysis.py
+│   ├── tip3p_data_visualization.py
+│   └── simulation_output/      # Output files and visualizations
+├── Snake_Game/
+│   ├── snake.py               # Snake game main file
+│   └── snake_game_classes.py  # Snake game classes
+├── VBA_Automation/
+│   └── VBA_Master_Macro.png   # VBA macro project image
+├── Ryan_Cooley_Resume.pdf
 ```
 
 ## 🚀 How to Run Projects
@@ -122,23 +129,23 @@ RCPortfolio/
 pip install openmm parmed numpy matplotlib mdtraj
 
 # Set up water box
-tleap -f tip3p_water_box_setup.leap
+tleap -f TIP3P_Water_Sim/tip3p_water_box_setup.leap
 
 # Run simulation
-python tip3p_molecular_dynamics_simulation.py
+python TIP3P_Water_Sim/tip3p_molecular_dynamics_simulation.py
 
 # Analyze results
-python tip3p_distance_analysis.py
-python tip3p_periodic_boundary_analysis.py
+python TIP3P_Water_Sim/tip3p_distance_analysis.py
+python TIP3P_Water_Sim/tip3p_periodic_boundary_analysis.py
 
 # Generate visualizations
-python tip3p_data_visualization.py
+python TIP3P_Water_Sim/tip3p_data_visualization.py
 ```
 
 ### Snake Game
 ```bash
 # Ensure Python 3 is installed
-python snake.py
+python Snake_Game/snake.py
 ```
 
 ## 📱 Features

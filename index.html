@@ -117,7 +117,7 @@
         <div class="portfolio-gallery">
             <div class="portfolio-item" data-project="tip3p">
                 <div class="image">
-                    <img src="tip3p/trajectory.gif" alt="TIP3P Water Box Simulation">
+                    <img src="TIP3P_Water_Sim/simulation_output/trajectory.gif" alt="TIP3P Water Box Simulation">
                     <div class="hover-overlay">
                         <h3>TIP3P Water Box Simulation</h3>
                         <p>Molecular Dynamics</p>
@@ -135,7 +135,7 @@
             </div>
             <div class="portfolio-item" data-project="vba">
                 <div class="image">
-                    <img src="img/VBA_Master_Macro.png" alt="VBA Data Processing Automation">
+                    <img src="VBA_Automation/VBA_Master_Macro.png" alt="VBA Data Processing Automation">
                     <div class="hover-overlay">
                         <h3>VBA Data Processing Automation</h3>
                         <p>Excel Automation</p>
@@ -182,7 +182,7 @@
             </div>
             
             <div class="project-image">
-                <img src="tip3p/trajectory.gif" alt="TIP3P Water Box Trajectory">
+                <img src="TIP3P_Water_Sim/simulation_output/trajectory.gif" alt="TIP3P Water Box Trajectory">
             </div>
             
             <div class="project-description">
@@ -205,29 +205,29 @@
                 
                 <h2>Analysis Results</h2>
                 <div class="project-image">
-                    <img src="tip3p/nearest_distances_histogram_waterbox.png" alt="Distance Analysis Results">
+                    <img src="TIP3P_Water_Sim/simulation_output/nearest_distances_histogram_waterbox.png" alt="Distance Analysis Results">
                     <p><em>Histogram of nearest-neighbor distances between water oxygens, illustrating the molecular spacing and statistical distribution.</em></p>
                 </div>
                 
                 <h2>Downloads</h2>
                 <div class="download-buttons">
-                    <a href="tip3p_molecular_dynamics_simulation.py" download class="main-btn">
+                    <a href="TIP3P_Water_Sim/tip3p_molecular_dynamics_simulation.py" download class="main-btn">
                         <span class="btn-text">Molecular Dynamics Simulation</span>
                         <span class="btn-icon"><i class="fas fa-download"></i></span>
                     </a>
-                    <a href="tip3p_water_box_setup.leap" download class="main-btn">
+                    <a href="TIP3P_Water_Sim/tip3p_water_box_setup.leap" download class="main-btn">
                         <span class="btn-text">Water Box Setup (Leap)</span>
                         <span class="btn-icon"><i class="fas fa-download"></i></span>
                     </a>
-                    <a href="tip3p_distance_analysis.py" download class="main-btn">
+                    <a href="TIP3P_Water_Sim/tip3p_distance_analysis.py" download class="main-btn">
                         <span class="btn-text">Distance Analysis</span>
                         <span class="btn-icon"><i class="fas fa-download"></i></span>
                     </a>
-                    <a href="tip3p_periodic_boundary_analysis.py" download class="main-btn">
+                    <a href="TIP3P_Water_Sim/tip3p_periodic_boundary_analysis.py" download class="main-btn">
                         <span class="btn-text">Periodic Boundary Analysis</span>
                         <span class="btn-icon"><i class="fas fa-download"></i></span>
                     </a>
-                    <a href="tip3p_data_visualization.py" download class="main-btn">
+                    <a href="TIP3P_Water_Sim/tip3p_data_visualization.py" download class="main-btn">
                         <span class="btn-text">Data Visualization</span>
                         <span class="btn-icon"><i class="fas fa-download"></i></span>
                     </a>
@@ -238,10 +238,10 @@
                 <ol>
                     <li>Download all Python scripts and the Leap file</li>
                     <li>Install required packages: <code>pip install openmm parmed numpy matplotlib mdtraj</code></li>
-                    <li>Set up the water box: <code>tleap -f tip3p_water_box_setup.leap</code></li>
-                    <li>Run the simulation: <code>python tip3p_molecular_dynamics_simulation.py</code></li>
-                    <li>Analyze results: <code>python tip3p_distance_analysis.py</code> and <code>python tip3p_periodic_boundary_analysis.py</code></li>
-                    <li>Generate visualizations: <code>python tip3p_data_visualization.py</code></li>
+                    <li>Set up the water box: <code>tleap -f TIP3P_Water_Sim/tip3p_water_box_setup.leap</code></li>
+                    <li>Run the simulation: <code>python TIP3P_Water_Sim/tip3p_molecular_dynamics_simulation.py</code></li>
+                    <li>Analyze results: <code>python TIP3P_Water_Sim/tip3p_distance_analysis.py</code> and <code>python TIP3P_Water_Sim/tip3p_periodic_boundary_analysis.py</code></li>
+                    <li>Generate visualizations: <code>python TIP3P_Water_Sim/tip3p_data_visualization.py</code></li>
                     <li>Visualize trajectory using VMD or similar software</li>
                 </ol>
                 
@@ -309,11 +309,11 @@
                 
                 <h2>Downloads</h2>
                 <div class="download-buttons">
-                    <a href="snake.py" download class="main-btn">
+                    <a href="Snake_Game/snake.py" download class="main-btn">
                         <span class="btn-text">Download Main Game File</span>
                         <span class="btn-icon"><i class="fas fa-download"></i></span>
                     </a>
-                    <a href="snake_game_classes.py" download class="main-btn">
+                    <a href="Snake_Game/snake_game_classes.py" download class="main-btn">
                         <span class="btn-text">Download Classes Module</span>
                         <span class="btn-icon"><i class="fas fa-download"></i></span>
                     </a>
@@ -322,14 +322,14 @@
                 <h2>How to Run</h2>
                 <p>To start playing:</p>
                 <ol>
-                    <li>Download both <code>snake.py</code> and <code>snake_game_classes.py</code></li>
+                    <li>Download both <code>Snake_Game/snake.py</code> and <code>Snake_Game/snake_game_classes.py</code></li>
                     <li>Ensure you have Python 3 installed</li>
                     <li>Open a terminal or command prompt</li>
                     <li>Navigate to the folder containing the files</li>
-                    <li>Execute: <code>python snake.py</code></li>
+                    <li>Execute: <code>python Snake_Game/snake.py</code></li>
                 </ol>
                 
-                <p><strong>Note:</strong> Both files are required—<code>snake.py</code> imports classes from <code>snake_game_classes.py</code>.</p>
+                <p><strong>Note:</strong> Both files are required—<code>Snake_Game/snake.py</code> imports classes from <code>Snake_Game/snake_game_classes.py</code>.</p>
                 <p><strong>Disclaimer:</strong> This game is a simple educational project and may have some quirks—such as food sometimes appearing near the edge, or the score being displayed at the top. For best results, run it in a standard Python environment with the <code>turtle</code> module installed.</p>
             </div>
         </div>
@@ -343,7 +343,7 @@
             </div>
             
             <div class="project-image">
-                <img src="img/VBA_Master_Macro.png" alt="VBA Data Processing Automation">
+                <img src="VBA_Automation/VBA_Master_Macro.png" alt="VBA Data Processing Automation">
             </div>
             
             <div class="project-description">

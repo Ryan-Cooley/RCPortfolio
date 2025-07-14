@@ -1,0 +1,3 @@
+[submodule "TIP3P-Water-Sim"]
+	path = TIP3P-Water-Sim
+	url = https://github.com/Ryan-Cooley/TIP3P-Water-Simulation.git

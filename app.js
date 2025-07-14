@@ -50,7 +50,7 @@
             const modal = document.getElementById(projectType + "-modal");
             if (modal) {
                 modal.style.display = "block";
-                document.body.style.overflow = "hidden"; // Prevent background scrolling
+                document.body.style.overflow = "hidden";
                 
                 // Reset modal scroll position to top
                 modal.scrollTop = 0;
@@ -82,7 +82,7 @@
             const modal = this.closest(".project-modal");
             if (modal) {
                 modal.style.display = "none";
-                document.body.style.overflow = "auto"; // Restore scrolling
+                document.body.style.overflow = "auto";
             }
         });
     });
@@ -142,4 +142,55 @@
     
     // Listen for hash changes
     window.addEventListener('hashchange', handleInitialState);
+    
+    // Email copy functionality
+    function copyEmail() {
+        const email = 'ryancooley20@gmail.com';
+        const emailLink = document.getElementById('email-link');
+        const emailCopied = document.getElementById('email-copied');
+        
+        // Try to copy to clipboard
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(email).then(() => {
+                showCopiedMessage();
+            }).catch(() => {
+                fallbackCopyEmail(email);
+            });
+        } else {
+            fallbackCopyEmail(email);
+        }
+    }
+    
+    function fallbackCopyEmail(email) {
+        const textArea = document.createElement('textarea');
+        textArea.value = email;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        textArea.style.top = '-999999px';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        
+        try {
+            document.execCommand('copy');
+            showCopiedMessage();
+        } catch (err) {
+            console.error('Failed to copy email:', err);
+        }
+        
+        document.body.removeChild(textArea);
+    }
+    
+    function showCopiedMessage() {
+        const emailCopied = document.getElementById('email-copied');
+        if (emailCopied) {
+            emailCopied.style.display = 'block';
+            setTimeout(() => {
+                emailCopied.style.display = 'none';
+            }, 2000);
+        }
+    }
+    
+    // Make copyEmail function globally available
+    window.copyEmail = copyEmail;
 })();

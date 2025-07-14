@@ -1,63 +1,171 @@
 # Ryan Cooley Portfolio Website
 
-This is the source code for my personal portfolio website, featuring my projects in scientific programming, web development, and more. The site is built with HTML, CSS, and JavaScript, and is designed to showcase both my technical and scientific skills.
+A modern, responsive portfolio website showcasing my projects in scientific programming, web development, automation, and technical certifications. Built with HTML, CSS, and JavaScript, featuring interactive project modals and a clean, professional design.
 
-## Featured Project: TIP3P Water Box Simulation
+## 🚀 Live Site
+Visit my portfolio at: [GitHub Pages URL]
 
-This project demonstrates a molecular dynamics simulation of a TIP3P water box using OpenMM and AmberTools. The code and analysis scripts provided here allow you to reproduce the simulation, analyze the results, and visualize the distribution of nearest-neighbor distances between water molecules.
+## ✨ Recent Updates (Latest Version)
 
-### Included Files
-- `tip3p_molecular_dynamics_simulation.py` — Main simulation script (OpenMM)
-- `tip3p_water_box_setup.leap` — Leap script for water box setup (AmberTools)
-- `tip3p_distance_analysis.py` — Analyze nearest-neighbor distances
-- `tip3p_periodic_boundary_analysis.py` — Analyze distances with periodic boundary conditions
-- `tip3p_data_visualization.py` — Generate a professional histogram of the results
-- `tip3p/nearest_distances_histogram_waterbox.png` — Example output graph
-- `tip3p/trajectory.gif` — Animated visualization of the simulation
+### New Portfolio Items Added
+- **VBA Data Processing Automation** - Entegris internship project with 1200% efficiency improvement
+- **Sushi Go Card Game** - C++ console implementation of the popular card game
+- **PCEP Python Certification** - Professional Python programming certification
+- **Ham Radio Technician License** - FCC license for CubeSat communications work
 
-### How to Run the Simulation and Analysis
-1. **Install dependencies:**
-   ```bash
-   pip install openmm parmed numpy matplotlib mdtraj
-   ```
-   AmberTools (for `tleap`) is also required for the setup step.
+### Enhanced Features
+- **Skills Section** - Comprehensive technical skills organized by category
+- **Contact Information** - Integrated contact details with copy-to-clipboard functionality
+- **Improved Mobile Responsiveness** - Enhanced touch interactions and responsive design
+- **Better Project Descriptions** - Detailed technical information and download links
+- **Professional Styling** - Modern hover effects and improved visual hierarchy
 
-2. **Set up the water box:**
-   ```bash
-   tleap -f tip3p_water_box_setup.leap
-   ```
+## 🎯 Featured Projects
 
-3. **Run the molecular dynamics simulation:**
-   ```bash
-   python tip3p_molecular_dynamics_simulation.py
-   ```
+### 1. TIP3P Water Box Simulation
+A molecular dynamics simulation using OpenMM and AmberTools, demonstrating scientific computing skills.
 
-4. **Analyze the results:**
-   ```bash
-   python tip3p_distance_analysis.py
-   python tip3p_periodic_boundary_analysis.py
-   ```
+**Key Features:**
+- OpenMM molecular dynamics simulation
+- AmberTools water box setup
+- Distance analysis with periodic boundary conditions
+- Professional data visualization with Matplotlib
+- Complete workflow from setup to analysis
 
-5. **Visualize the data:**
-   ```bash
-   python tip3p_data_visualization.py
-   ```
-   The output histogram will be saved as `tip3p/nearest_distances_histogram_waterbox.png`.
+**Files Included:**
+- `tip3p_molecular_dynamics_simulation.py` — Main simulation script
+- `tip3p_water_box_setup.leap` — Water box setup (AmberTools)
+- `tip3p_distance_analysis.py` — Nearest-neighbor distance analysis
+- `tip3p_periodic_boundary_analysis.py` — Periodic boundary analysis
+- `tip3p_data_visualization.py` — Data visualization and plotting
+- `tip3p/` — Output files and visualizations
 
-6. **Visualize the trajectory:**
-   Use VMD or similar software to view the generated trajectory files.
+### 2. Snake Game
+A classic Snake game implemented in Python with the turtle graphics library.
 
-## Website Structure
-- `index.html` — Main portfolio page with project modals
-- `styles/` — CSS styles
-- `app.js` — JavaScript for navigation and modals
-- `img/` — Images for the site and projects
-- `tip3p/` — Project images and analysis output
+**Key Features:**
+- Object-oriented design with separate classes
+- Real-time score tracking and high score system
+- Smooth keyboard controls and collision detection
+- Educational project demonstrating Python fundamentals
 
-## Live Site
-You can view the live portfolio at: [GitHub Pages URL]
+**Files Included:**
+- `snake.py` — Main game file
+- `snake_game_classes.py` — Game classes module
+
+### 3. VBA Data Processing Automation
+Professional automation project from Entegris internship.
+
+**Key Features:**
+- Automated data processing, analysis, and reporting
+- 1200% efficiency improvement (38 minutes → 3 minutes)
+- Dynamic report generation with embedded charts
+- Error handling and validation routines
+
+### 4. Sushi Go Card Game
+C++ console implementation of the popular card game.
+
+**Key Features:**
+- Object-oriented design with multiple interacting classes
+- Complex game logic and scoring systems
+- Comprehensive testing and validation
+- Academic project demonstrating C++ best practices
+
+## 🛠️ Technical Skills
+
+### Programming & Automation
+- **Python** (PCEP Certified) - Scientific computing, automation, web development
+- **C++** - Object-oriented programming, game development
+- **Git** - Version control and collaboration
+- **VBA** - Excel automation and data processing
+
+### Molecular Simulation
+- **OpenMM** - Molecular dynamics simulations
+- **VMD** - Molecular visualization and analysis
+
+### Astronomical Data
+- **CIAO** - X-ray astronomy data analysis
+- **DS9** - Astronomical image visualization
+
+### Web & Document
+- **HTML/CSS/JavaScript** - Modern web development
+- **LaTeX** - Technical document preparation
+
+### Linux & Security
+- **Command-line** - System administration and automation
+- **OverTheWire Bandit** - Cybersecurity training
+
+## 🏗️ Project Structure
+
+```
+RCPortfolio/
+├── index.html              # Main portfolio page
+├── styles/
+│   ├── styles.css         # Main stylesheet
+│   ├── styles.scss        # SCSS source
+│   └── _media.scss        # Responsive design
+├── app.js                 # JavaScript functionality
+├── img/                   # Project images and icons
+├── tip3p/                 # Molecular simulation files
+├── snake.py               # Snake game main file
+├── snake_game_classes.py  # Snake game classes
+├── tip3p_*.py            # Molecular simulation scripts
+├── tip3p_water_box_setup.leap
+└── Ryan_Cooley_Resume.pdf
+```
+
+## 🚀 How to Run Projects
+
+### TIP3P Molecular Dynamics Simulation
+```bash
+# Install dependencies
+pip install openmm parmed numpy matplotlib mdtraj
+
+# Set up water box
+tleap -f tip3p_water_box_setup.leap
+
+# Run simulation
+python tip3p_molecular_dynamics_simulation.py
+
+# Analyze results
+python tip3p_distance_analysis.py
+python tip3p_periodic_boundary_analysis.py
+
+# Generate visualizations
+python tip3p_data_visualization.py
+```
+
+### Snake Game
+```bash
+# Ensure Python 3 is installed
+python snake.py
+```
+
+## 📱 Features
+
+- **Responsive Design** - Optimized for desktop, tablet, and mobile
+- **Interactive Modals** - Detailed project information with downloads
+- **Modern UI/UX** - Clean design with smooth animations
+- **Touch-Friendly** - Enhanced mobile interactions
+- **Professional Styling** - Consistent branding and typography
+
+## 🎓 About Me
+
+I'm a Chemical Physics major at Tufts University, working in the Ding Lab on OpenMM molecular simulations. As Communications & Ground Station Lead for the Tufts CubeSat Team (SEDS), I'm researching ground-station hardware and uplink/downlink protocols for our upcoming satellite mission.
+
+My technical background includes:
+- Scientific programming and molecular simulation
+- Data automation and process optimization
+- Web development and modern technologies
+- Academic projects and professional certifications
+
+## 📞 Contact
+
+- **Email:** ryancooley20@gmail.com
+- **LinkedIn:** [linkedin.com/in/ryancooley20](https://www.linkedin.com/in/ryancooley20/)
+- **GitHub:** [github.com/Ryan-Cooley](https://github.com/Ryan-Cooley)
 
 ---
 
-If you have any questions or want to collaborate, feel free to reach out!
+*This portfolio showcases my journey in scientific computing, automation, and modern web technologies. Feel free to reach out for collaboration opportunities!*
 

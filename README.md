@@ -3,7 +3,7 @@
 A modern, responsive portfolio website showcasing my projects in scientific programming, web development, automation, and technical certifications. Built with HTML, CSS, and JavaScript, featuring interactive project modals and a clean, professional design.
 
 ## 🚀 Live Site
-Visit my portfolio at: [GitHub Pages URL]
+Visit my portfolio at: https://ryan-cooley.github.io/RCPortfolio/#home
 
 ## ✨ Recent Updates (Latest Version)
 

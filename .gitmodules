@@ -1,3 +1,7 @@
 [submodule "VBA_Automation"]
-	path = VBA_Automation
-	url = https://github.com/Ryan-Cooley/VBA_Automation.git
+    path = VBA_Automation
+    url = https://github.com/Ryan-Cooley/VBA_Automation
+
+[submodule "TIP3P-Water-Sim"]
+    path = TIP3P-Water-Sim
+    url = https://github.com/Ryan-Cooley/TIP3P-Water-Simulation.git

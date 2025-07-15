@@ -1,0 +1,3 @@
+[submodule "VBA_Automation"]
+	path = VBA_Automation
+	url = https://github.com/Ryan-Cooley/VBA_Automation.git

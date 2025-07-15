@@ -124,7 +124,7 @@ RCPortfolio/
 ## 🚀 How to Run Projects
 
 ### TIP3P Molecular Dynamics Simulation
-```bash
+   ```bash
 # Install dependencies
 pip install openmm parmed numpy matplotlib mdtraj
 
@@ -143,10 +143,10 @@ python TIP3P_Water_Sim/tip3p_data_visualization.py
 ```
 
 ### Snake Game
-```bash
+   ```bash
 # Ensure Python 3 is installed
 python Snake_Game/snake.py
-```
+   ```
 
 ## 📱 Features
 

@@ -56,5 +56,3 @@ VBA_Automation/
 ## Contact
 **Ryan Cooley**  
 [Portfolio](https://ryan-cooley.github.io/RCPortfolio)  •  [Email](mailto:ryancooley20@gmail.com)
-
-*Confidential project examples available upon request.* 

@@ -1,0 +1,7 @@
+# PHPStorm
+.idea
+.DS_Store
+*.dcd
+*.prmtop
+*.inpcrd
+__pycache__/

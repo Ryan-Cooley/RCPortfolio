@@ -126,6 +126,15 @@
                     </div>
                 </div>
             </div>
+            <div class="portfolio-item" data-project="montecarlo">
+                <div class="image">
+                    <img src="img/pnl_histogram.png" alt="Monte Carlo Option Pricer">
+                    <div class="hover-overlay">
+                        <h3>Monte Carlo Option Pricing</h3>
+                        <p>Python Quantitative Finance</p>
+                    </div>
+                </div>
+            </div>
             <div class="portfolio-item" data-project="snake">
                 <div class="image">
                     <img src="img/snake_image.png" alt="Snake Game">
@@ -175,6 +184,123 @@
     </section>
 
     <!-- Project Modals -->
+    <div id="home-modal" class="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="project-header">
+                <h1>Ryan Cooley</h1>
+                <p class="project-category">Software & Projects Portfolio</p>
+            </div>
+            
+            <div class="project-image">
+                <img src="img/ryan_pic.jpg" alt="Ryan Cooley">
+            </div>
+            
+            <div class="project-description">
+                <h2>About Me</h2>
+                <p>
+                    I'm a Chemical Physics major at Tufts University, where I use OpenMM molecular simulations in the Ding Lab to investigate complex chemical systems and reaction dynamics.
+                </p>
+                <p>
+                    As Communications &amp; Ground Station Lead for the Tufts CubeSat Team (SEDS), I'm researching ground-station hardware and uplink/downlink protocols in preparation for our upcoming satellite mission.
+                </p>
+                <p>
+                    In Summer 2025, I interned at Entegris as a Metrology Retention Assistant, where I developed a suite of VBA macros to automate data processing, analysis, and reporting—making the task over 1200% more efficient.
+                </p>
+                <p>
+                    This portfolio highlights my work in Python, C++, VBA, and modern web technologies (HTML, CSS, JavaScript), showcasing projects that blend scientific research, automation, and interactive experiences.
+                </p>
+                <p>
+                    Outside of academics and tech, I'm passionate about rock climbing and squash, which challenge me both physically and mentally.
+                </p>
+                <div class="btn-con">
+                    <a href="Ryan_Cooley_Resume.pdf" class="main-btn" target="_blank">
+                        <span class="btn-text">Download Resume</span>
+                        <span class="btn-icon"><i class="fas fa-download"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="montecarlo-modal" class="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="project-header">
+                <div class="header-title-section">
+                    <h1>Monte Carlo Option Pricer</h1>
+                    <a href="https://github.com/Ryan-Cooley/quant-option-pricer" target="_blank" class="github-link" title="View on GitHub">
+                        <i class="fab fa-github"></i>
+                        <span class="github-text">View Code</span>
+                    </a>
+                </div>
+                <p class="project-category">Python Quantitative Finance</p>
+            </div>
+            <div class="project-image">
+                <img src="img/pnl_histogram.png" alt="P&L Distribution with Risk Metrics">
+            </div>
+            <div class="project-description">
+                <h2>Why This Project?</h2>
+                <p><strong>As a prospective quantitative analyst,</strong> I built this project to demonstrate my ability to engineer robust, high-performance tools for real-world financial modeling. This pricer showcases my skills in Python, numerical methods, risk analytics, and data-driven software engineering—core competencies for a modern quant. The project is designed to be production-grade, fully tested, and extensible for both research and trading applications.</p>
+                <h2>Project Overview</h2>
+                <p>
+                    <strong>Quant Option Pricer</strong> is a high-performance Python platform for pricing European call options using both a Numba-accelerated Monte Carlo simulator and the analytical Black-Scholes model. It features advanced risk analysis, performance benchmarking, and publication-quality visualizations. The codebase is modular, CI-tested, and ready for integration into larger quant research pipelines.
+                </p>
+                <h2>What Sets This Apart?</h2>
+                <ul>
+                    <li><strong>Real-World Data Integration:</strong> Ingests live market data from Yahoo Finance for volatility estimation, ensuring realistic and up-to-date modeling.</li>
+                    <li><strong>Performance Engineering:</strong> Numba JIT acceleration delivers >50x speedup for large-scale simulations—critical for real-time risk and pricing.</li>
+                    <li><strong>Risk & Sensitivity Analysis:</strong> Computes and visualizes Value-at-Risk (VaR), Conditional VaR (CVaR), and Greeks (Delta, Vega) for robust risk management.</li>
+                    <li><strong>Testing & Reproducibility:</strong> Full pytest suite, Docker containerization, and CI/CD for reliability and professional software standards.</li>
+                    <li><strong>Advanced Visualization:</strong> Generates insightful plots for convergence, risk, and sensitivities—key for communicating results to stakeholders.</li>
+                </ul>
+                <h2>Skills Demonstrated</h2>
+                <ul>
+                    <li>Python (NumPy, Pandas, Matplotlib, Numba, yfinance)</li>
+                    <li>Stochastic modeling & Monte Carlo simulation</li>
+                    <li>Risk analytics (VaR, CVaR, Greeks)</li>
+                    <li>Numerical methods & performance optimization</li>
+                    <li>Data pipeline engineering & automation</li>
+                    <li>Testing, CI/CD, and reproducible research</li>
+                </ul>
+                <h2>Quickstart</h2>
+                <ol>
+                    <li>Clone the repo: <code>git clone https://github.com/Ryan-Cooley/MonteCarlo</code></li>
+                    <li>Install dependencies: <code>pip install -r requirements.txt</code> or use <code>environment.yml</code></li>
+                    <li>Run the pricer: <code>python quant_option.py --ticker AAPL --S0 150 --K 155</code></li>
+                    <li>Run the notebook: <code>jupyter notebook notebooks/QuantOptionDemo.ipynb</code></li>
+                </ol>
+                <h2>Sample Outputs & Explanations</h2>
+                <div class="project-image">
+                    <img src="img/AAPL_returns.png" alt="AAPL Historical Log-Returns" style="max-width: 100%; border-radius: 8px;">
+                    <p><em><strong>Historical Log-Returns:</strong> Daily log-returns of the underlying asset (AAPL) over the past year. Used to estimate annualized volatility, a critical input for option pricing models.</em></p>
+                </div>
+                <div class="project-image">
+                    <img src="img/convergence_v2.png" alt="Monte Carlo Convergence" style="max-width: 100%; border-radius: 8px;">
+                    <p><em><strong>Monte Carlo Convergence:</strong> Shows the convergence of the Monte Carlo price estimate to the analytical Black-Scholes price as the number of simulated paths increases. Demonstrates the Law of Large Numbers and validates the MC implementation.</em></p>
+                </div>
+                <div class="project-image">
+                    <img src="img/pnl_histogram.png" alt="P&L Distribution with Risk Metrics" style="max-width: 100%; border-radius: 8px;">
+                    <p><em><strong>P&L Distribution with Risk Metrics:</strong> Histogram of simulated Profit and Loss (P&L) at option expiry, with VaR and CVaR marked. Quantifies downside risk of the option position.</em></p>
+                </div>
+                <div class="project-image">
+                    <img src="img/delta_surface.png" alt="Delta Surface" style="max-width: 100%; border-radius: 8px;">
+                    <p><em><strong>Delta Surface:</strong> 3D surface of the option's Delta across spot prices and volatilities. Visualizes how the option's value changes with the underlying asset's price and volatility.</em></p>
+                </div>
+                <div class="project-image">
+                    <img src="img/vega_surface.png" alt="Vega Surface" style="max-width: 100%; border-radius: 8px;">
+                    <p><em><strong>Vega Surface:</strong> 3D surface of the option's Vega across spot prices and volatilities. Shows sensitivity of the option price to changes in volatility, essential for risk management.</em></p>
+                </div>
+                <h2>Why It Matters</h2>
+                <ul>
+                    <li>Demonstrates advanced quantitative finance and risk management in Python</li>
+                    <li>Showcases high-performance scientific computing (Numba, Matplotlib, Docker)</li>
+                    <li>Highlights robust software engineering with testing and CI/CD</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div id="tip3p-modal" class="project-modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>

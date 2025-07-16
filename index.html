@@ -222,7 +222,7 @@
                 <span class="github-text">View Code</span>
               </a>
             </div>
-            <p class="project-category">Python • Computational Simulations & Systems Analysis</p>
+            <p class="project-category">Python • Computational Finance • Risk Analysis</p>
           </div>
       
           <div class="project-image">
@@ -230,41 +230,32 @@
           </div>
       
           <div class="project-description">
-            <h2>Why This Project?</h2>
-            <p>This project grew out of my curiosity about how complex systems behave under uncertainty and how we can build tools to explore those questions at scale.</p>
-            <p>I set out to create a fast, reliable simulation engine that not only models financial options, but also serves as a testbed for understanding risk, performance, and system robustness in real-world scenarios. By combining modern Python techniques with a focus on reproducibility and automation, I wanted to make it easy for anyone—whether a scientist, engineer, or just a curious mind—to experiment, learn, and trust the results.</p>
-            <p>The project is fully automated and production-ready, designed to run smoothly and transparently in any environment.</p>
-            <hr/>
             <h2>Project Overview</h2>
             <p>
-                <strong>Monte Carlo Option Pricer</strong> is a robust, high-speed simulation engine for modeling financial options, designed to test system reliability and performance under real-world conditions. Born from a curiosity about how complex systems behave under uncertainty, this project makes it easy for anyone—scientist, engineer, or curious mind—to experiment, learn, and trust the results. With modern Python tools, just-in-time compilation, and full automation, it delivers fast, reproducible insights into risk and system behavior, and runs smoothly in any environment.
+              This project is a high-performance simulation engine that prices financial options and analyzes their risk. It was built to explore how complex financial instruments behave under real-world uncertainty, making sophisticated quantitative analysis accessible and intuitive. The entire system is automated—from fetching live market data to generating insightful visualizations—creating a seamless, production-ready tool for financial modeling.
             </p>
             <hr/>
-            <h2>What Sets This Apart?</h2>
+            <h2>Key Features</h2>
             <ul style="margin-bottom: 1.5em;">
-                <li><strong>Real-World Data:</strong> Pulls in live market data to keep simulations grounded in reality, not just theory.</li>
-                <li><strong>Performance Focus:</strong> Uses just-in-time compilation to make large-scale experiments fast and interactive, so you can explore “what if?” questions without waiting.</li>
-                <li><strong>Risk & Reliability:</strong> Models uncertainty and system behavior, helping users see not just average outcomes, but the full range of possibilities and edge cases.</li>
-                <li><strong>Reproducibility & Automation:</strong> Every result can be reproduced and shared, thanks to automated testing, containerization, and continuous integration.</li>
-                <li><strong>Visual Storytelling:</strong> Generates clear, intuitive plots that make it easy to see how systems respond to change—inviting exploration and deeper understanding.</li>
+                <li><strong>Live Market Data:</strong> Integrates with Yahoo Finance to pull real-time stock data, ensuring simulations are grounded in current market conditions.</li>
+                <li><strong>High-Speed Computing:</strong> Uses Numba's just-in-time (JIT) compilation to accelerate calculations, enabling large-scale experiments without the long wait times.</li>
+                <li><strong>In-Depth Risk Analysis:</strong> Models and visualizes key risk metrics ("the Greeks") to provide a deeper understanding of how option values respond to market changes.</li>
+                <li><strong>End-to-End Automation:</strong> The workflow is fully automated, from data ingestion to continuous integration with GitHub Actions, ensuring reliability and reproducibility.</li>
+                <li><strong>Clear Visual Storytelling:</strong> Generates intuitive plots that distill complex financial data into easy-to-understand insights, such as profit/loss distributions and risk sensitivities.</li>
             </ul>
             <hr/>
-            <h2>Skills Demonstrated</h2>
+            <h2>Technical Skills</h2>
             <ul style="margin-bottom: 1.5em;">
-                <li>Python for scientific computing and automation</li>
-                <li>Building and optimizing simulation engines</li>
-                <li>Modeling uncertainty and system behavior</li>
-                <li>Performance tuning and systems engineering</li>
-                <li>Automated testing, reproducibility, and deployment</li>
+                <li><strong>Python:</strong> Scientific computing (NumPy, Pandas), data visualization (Matplotlib), and automation.</li>
+                <li><strong>Performance Optimization:</strong> Just-in-time (JIT) compilation with Numba for high-speed calculations.</li>
+                <li><strong>Software Engineering:</strong> Object-oriented design, automated testing (Pytest), and CI/CD with GitHub Actions.</li>
+                <li><strong>Reproducibility:</strong> Environment management with Conda and containerization with Docker to ensure consistent results.</li>
             </ul>
             <hr/>
-            <h2>Quickstart</h2>
-            <ol style="margin-bottom: 1.5em;">
-                <li>Clone the repo: <code>git clone https://github.com/Ryan-Cooley/quant-option-pricer</code></li>
-                <li>Install dependencies: <code>pip install -r requirements.txt</code> or use <code>environment.yml</code></li>
-                <li>Run the pricer: <code>python quant_option.py --ticker AAPL --S0 150 --K 155</code></li>
-                <li>Run the notebook: <code>jupyter notebook notebooks/QuantOptionDemo.ipynb</code></li>
-            </ol>
+            <h2>Technical Details</h2>
+            <p>
+              The simulation engine can be run via the command line for quick analysis or through a Jupyter Notebook for more interactive and exploratory work. The code is modular and well-documented, making it easy to extend or integrate into other financial analysis platforms.
+            </p>
             <hr/>
             <h2>Sample Outputs & Explanations</h2>
             <div class="project-image">
@@ -273,11 +264,11 @@
             </div>
             <div class="project-image">
               <img src="img/convergence_v2.png" alt="Monte Carlo Convergence" style="max-width:100%; border-radius:8px;">
-              <p><em><strong>Simulation Convergence:</strong> Monte Carlo price estimate approaches the analytical price as more paths are simulated, validating accuracy and performance.</em></p>
+              <p><em><strong>Simulation Convergence:</strong> The model's price estimate aligns with the analytical price as more simulations are run, validating its accuracy.</em></p>
             </div>
             <div class="project-image">
               <img src="img/pnl_histogram.png" alt="P&L Distribution" style="max-width:100%; border-radius:8px;">
-              <p><em><strong>Risk Distribution:</strong> Histogram of simulated profit and loss at expiry, highlighting the range of possible outcomes and tail risks.</em></p>
+              <p><em><strong>Risk Distribution:</strong> A histogram of potential profit and loss outcomes, highlighting the range of possibilities and tail risks.</em></p>
             </div>
             <div class="project-image">
               <img src="img/delta_surface.png" alt="Delta Surface" style="max-width:100%; border-radius:8px;">
@@ -288,11 +279,11 @@
               <p><em><strong>System Sensitivity (Vega):</strong> Visualizes how the option’s value responds to changes in volatility, essential for understanding risk.</em></p>
             </div>
       
-            <h2>Why It Matters</h2>
+            <h2>Project Significance</h2>
             <ul>
-              <li>Demonstrates scalable, high‑performance computational modeling</li>
-              <li>Illustrates systems‑level thinking: from data ingestion to automated deployment</li>
-              <li>Showcases best practices in reproducible research and software engineering</li>
+              <li>Demonstrates the ability to build scalable, high-performance computational models for complex systems.</li>
+              <li>Illustrates a systems-thinking approach, from initial data ingestion to automated deployment and analysis.</li>
+              <li>Showcases best practices in reproducible research and modern software engineering.</li>
             </ul>
           </div>
         </div>
@@ -309,7 +300,7 @@
               <span class="github-text">View Code</span>
             </a>
           </div>
-          <p class="project-category">Python • Computational Chemistry & Systems Analysis</p>
+          <p class="project-category">Python • Molecular Dynamics • Scientific Computing</p>
         </div>
 
         <div class="project-image">
@@ -317,56 +308,44 @@
         </div>
 
         <div class="project-description">
-          <h2>Why This Project?</h2>
-          <p>
-            I wanted to understand how water molecules self-organize under realistic conditions and build a reusable workflow for analyzing molecular systems. By combining OpenMM’s simulation engine with custom Python analysis scripts, this project demonstrates end-to-end systems thinking—from model setup and execution to automated data processing and visualization.
-          </p>
-          <hr/>
           <h2>Project Overview</h2>
           <p>
-            <strong>TIP3P Water Box Simulation</strong> uses AmberTools to generate a cubic box of TIP3P water molecules, runs dynamics via OpenMM, and employs MDTraj and Matplotlib for statistical analysis and plots. The codebase is modular, fully reproducible, and container-ready for easy sharing and extension.
+            This project simulates the behavior of water molecules at the atomic level to reveal how they self-organize and interact. It provides a complete, end-to-end workflow for molecular dynamics research, demonstrating how to set up a simulation, run it on high-performance computing platforms, and analyze the results. The entire process is automated and reproducible, creating a powerful and accessible tool for computational chemistry.
           </p>
           <hr/>
-          <h2>Key Advantages</h2>
+          <h2>Key Features</h2>
           <ul style="margin-bottom: 1.5em;">
-            <li><strong>Accurate & Efficient:</strong> Leverages the TIP3P model and Particle Mesh Ewald to balance computational cost and physical fidelity.</li>
-            <li><strong>End-to-End Automation:</strong> Scripts automate box setup, simulation, analysis, and figure generation—eliminating manual steps.</li>
-            <li><strong>Systems Insight:</strong> Nearest‑neighbor distance histograms and trajectory visuals reveal molecular packing and dynamic behavior.</li>
-            <li><strong>Reproducibility:</strong> Configuration files, environment specs, and containerization ensure others can reproduce results exactly.</li>
-            <li><strong>Extensible Framework:</strong> Easily swap in different force fields or analysis metrics for broader molecular-system studies.</li>
+            <li><strong>Accurate Molecular Modeling:</strong> Uses the industry-standard TIP3P water model and advanced simulation techniques (Particle Mesh Ewald) to ensure physically realistic results.</li>
+            <li><strong>End-to-End Automation:</strong> The entire workflow is scripted, from initial system setup with AmberTools to running the simulation with OpenMM and generating final plots.</li>
+            <li><strong>Insightful Data Analysis:</strong> Automatically calculates and visualizes key structural properties, like the radial distribution function, to reveal the signature patterns of liquid water.</li>
+            <li><strong>Reproducible Science:</strong> The project is fully containerized with Docker and includes detailed environment specifications, ensuring that the results are verifiable and consistent.</li>
+            <li><strong>Extensible Framework:</strong> The modular design makes it easy to adapt the workflow for simulating other molecular systems or exploring new scientific questions.</li>
           </ul>
           <hr/>
-          <h2>Skills Demonstrated</h2>
+          <h2>Technical Skills</h2>
           <ul style="margin-bottom: 1.5em;">
-            <li>Setting up and running molecular dynamics with OpenMM & AmberTools</li>
-            <li>Writing Python scripts for data extraction, statistical analysis, and plotting</li>
-            <li>Applying systems-level thinking to automate complex workflows</li>
-            <li>Ensuring reproducibility via environment files and containerization</li>
-            <li>Visual storytelling through interactive GIFs and publication-ready plots</li>
+            <li><strong>Python:</strong> Scientific computing (MDTraj, NumPy), data visualization (Matplotlib), and workflow automation.</li>
+            <li><strong>Molecular Dynamics:</strong> Simulation setup and execution with OpenMM, AmberTools, and industry-standard force fields.</li>
+            <li><strong>Systems Engineering:</strong> Building automated, end-to-end pipelines for scientific research.</li>
+            <li><strong>Reproducibility:</strong> Environment management with Conda and containerization with Docker to ensure scientific validity.</li>
           </ul>
           <hr/>
-          <h2>Quickstart</h2>
-          <ol style="margin-bottom: 1.5em;">
-            <li>Clone the repo: <code>git clone https://github.com/Ryan-Cooley/TIP3P-Water-Simulation.git</code></li>
-            <li>Install dependencies: <code>pip install -r requirements.txt</code> (or use <code>environment.yml</code>)</li>
-            <li>Generate the water box: <code>tleap -f tip3p_water_box_setup.leap</code></li>
-            <li>Run dynamics: <code>python tip3p_molecular_dynamics_simulation.py</code></li>
-            <li>Analyze distances: <code>python tip3p_distance_analysis.py</code></li>
-            <li>Visualize results: <code>python tip3p_data_visualization.py</code></li>
-            <li>View trajectory: open <code>trajectory.gif</code> or load the DCD in VMD</li>
-          </ol>
+          <h2>Technical Details</h2>
+          <p>
+            The simulation generates a trajectory file that can be visualized in standard molecular graphics programs like VMD, allowing for an interactive exploration of the results. The analysis scripts produce publication-quality plots that are ready for inclusion in scientific reports.
+          </p>
           <hr/>
           <h2>Sample Outputs</h2>
           <div class="project-image">
             <img src="TIP3P-Water-Sim/simulation_output/nearest_distances_histogram_waterbox.png" alt="Nearest-Neighbor Distance Histogram" style="max-width:100%; border-radius:8px;">
-            <p><em><strong>Molecular Spacing:</strong> Histogram of nearest‑neighbor oxygen–oxygen distances, showing the characteristic 0.28 nm peak of liquid water.</em></p>
+            <p><em><strong>Molecular Spacing:</strong> A histogram of the distances between neighboring oxygen atoms, showing the characteristic 0.28 nm peak that defines the structure of liquid water.</em></p>
           </div>
           <hr/>
-          <h2>Why It Matters</h2>
+          <h2>Project Significance</h2>
           <ul style="margin-bottom: 1.5em;">
-            <li>Demonstrates scalable molecular dynamics workflows for computational chemistry</li>
-            <li>Highlights systems engineering: from input preparation through automated analysis</li>
-            <li>Provides a template for reliable, reproducible scientific research using open‑source tools</li>
+            <li>Demonstrates a scalable and automated workflow for complex molecular dynamics simulations.</li>
+            <li>Highlights a systems-engineering approach to scientific research, from initial setup to final analysis.</li>
+            <li>Provides a reliable and reproducible template for conducting computational chemistry research with open-source tools.</li>
           </ul>
         </div>
       </div>

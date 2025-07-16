@@ -27,7 +27,7 @@ RCPortfolio/
 ├── app.js                  # Main JavaScript file for interactivity
 ├── index.html              # Main HTML file (website structure)
 ├── README.md               # Project README (this file)
-├── Ryan_Cooley_Resume.pdf  # Link to Ryan's resume
+├── Ryan_Cooley_Resume_2025.pdf  # Link to Ryan's resume
 ├── img/                    # Image assets for the website
 ├── Snake_Game/             # Submodule for the Python Snake Game
 ├── styles/                 # SCSS and compiled CSS files

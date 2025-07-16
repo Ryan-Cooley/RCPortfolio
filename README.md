@@ -5,20 +5,13 @@ A modern, responsive portfolio website showcasing my projects in scientific prog
 ## 🚀 Live Site
 Visit my portfolio at: https://ryan-cooley.github.io/RCPortfolio/#home
 
-## ✨ Recent Updates (Latest Version)
+## 📱 Features
 
-### New Portfolio Items Added
-- **VBA Data Processing Automation** - Entegris internship project with 1200% efficiency improvement
-- **Sushi Go Card Game** - C++ console implementation of the popular card game
-- **PCEP Python Certification** - Professional Python programming certification
-- **Ham Radio Technician License** - FCC license for CubeSat communications work
-
-### Enhanced Features
-- **Skills Section** - Comprehensive technical skills organized by category
-- **Contact Information** - Integrated contact details with copy-to-clipboard functionality
-- **Improved Mobile Responsiveness** - Enhanced touch interactions and responsive design
-- **Better Project Descriptions** - Detailed technical information and download links
-- **Professional Styling** - Modern hover effects and improved visual hierarchy
+- **Responsive Design** - Optimized for desktop, tablet, and mobile
+- **Interactive Modals** - Detailed project information with downloads
+- **Modern UI/UX** - Clean design with smooth animations
+- **Touch-Friendly** - Enhanced mobile interactions
+- **Professional Styling** - Consistent branding and typography
 
 ## 🎯 Featured Projects
 
@@ -40,7 +33,19 @@ A molecular dynamics simulation using OpenMM and AmberTools, demonstrating scien
 - `TIP3P_Water_Sim/tip3p_data_visualization.py` — Data visualization and plotting
 - `TIP3P_Water_Sim/simulation_output/` — Output files and visualizations
 
-### 2. Snake Game
+### 2. Monte Carlo Option Pricer
+The Monte Carlo Option Pricer is a robust, high-speed simulation engine for modeling financial options, designed to test system reliability and performance under real-world conditions. Born from a curiosity about how complex systems behave under uncertainty, this project makes it easy for anyone—scientist, engineer, or curious mind—to experiment, learn, and trust the results. With modern Python tools, just-in-time compilation, and full automation, it delivers fast, reproducible insights into risk and system behavior, and runs smoothly in any environment.
+
+**Key Features:**
+- Flexible simulation engine for exploring uncertainty and system behavior
+- Real-world data integration for grounded experiments
+- Risk modeling and performance metrics for system reliability
+- Intuitive visualizations for clear insights
+- Fully automated, reproducible, and production-ready
+
+**Repository:** [Monte Carlo Option Pricer](https://github.com/Ryan-Cooley/quant-option-pricer)
+
+### 3. Snake Game
 A classic Snake game implemented in Python with the turtle graphics library.
 
 **Key Features:**
@@ -53,7 +58,7 @@ A classic Snake game implemented in Python with the turtle graphics library.
 - `Snake_Game/snake.py` — Main game file
 - `Snake_Game/snake_game_classes.py` — Game classes module
 
-### 3. VBA Data Processing Automation
+### 4. VBA Data Processing Automation
 Professional automation project from Entegris internship.
 
 **Key Features:**
@@ -62,7 +67,7 @@ Professional automation project from Entegris internship.
 - Dynamic report generation with embedded charts
 - Error handling and validation routines
 
-### 4. Sushi Go Card Game
+### 5. Sushi Go Card Game
 C++ console implementation of the popular card game.
 
 **Key Features:**
@@ -158,13 +163,10 @@ python Snake_Game/snake.py
 
 ## 🎓 About Me
 
-I'm a Chemical Physics major at Tufts University, working in the Ding Lab on OpenMM molecular simulations. As Communications & Ground Station Lead for the Tufts CubeSat Team (SEDS), I'm researching ground-station hardware and uplink/downlink protocols for our upcoming satellite mission.
+- I’m a Computational Scientist and systems thinker with a passion for building high-performance tools that bridge scientific research and real-world engineering. Whether I’m simulating molecular systems in the lab, optimizing data workflows in industry, or leading communications for a CubeSat mission, I thrive on solving complex problems with code, curiosity, and a focus on practical impact.
 
-My technical background includes:
-- Scientific programming and molecular simulation
-- Data automation and process optimization
-- Web development and modern technologies
-- Academic projects and professional certifications
+### Monte Carlo Option Pricer
+The Monte Carlo Option Pricer is a robust, high-speed simulation engine for modeling financial options, designed to test system reliability and performance under real-world conditions. Born from a curiosity about how complex systems behave under uncertainty, this project makes it easy for anyone—scientist, engineer, or curious mind—to experiment, learn, and trust the results. With modern Python tools, just-in-time compilation, and full automation, it delivers fast, reproducible insights into risk and system behavior, and runs smoothly in any environment.
 
 ## 📞 Contact
 

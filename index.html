@@ -213,173 +213,155 @@
 
     <div id="montecarlo-modal" class="project-modal">
         <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="project-header">
-                <div class="header-title-section">
-                    <h1>Monte Carlo Option Pricer</h1>
-                    <a href="https://github.com/Ryan-Cooley/quant-option-pricer" target="_blank" class="github-link" title="View on GitHub">
-                        <i class="fab fa-github"></i>
-                        <span class="github-text">View Code</span>
-                    </a>
-                </div>
-                <p class="project-category">Python Quantitative Finance</p>
+          <span class="close-modal">&times;</span>
+          <div class="project-header">
+            <div class="header-title-section">
+              <h1>Monte Carlo Option Pricer</h1>
+              <a href="https://github.com/Ryan-Cooley/quant-option-pricer" target="_blank" class="github-link" title="View on GitHub">
+                <i class="fab fa-github"></i>
+                <span class="github-text">View Code</span>
+              </a>
+            </div>
+            <p class="project-category">Python • Computational Simulations & Systems Analysis</p>
+          </div>
+      
+          <div class="project-image">
+            <img src="img/pnl_histogram.png" alt="P&L Distribution with Risk Metrics">
+          </div>
+      
+          <div class="project-description">
+            <h2>Why This Project?</h2>
+            <p>This project grew out of my curiosity about how complex systems behave under uncertainty and how we can build tools to explore those questions at scale.</p>
+            <p>I set out to create a fast, reliable simulation engine that not only models financial options, but also serves as a testbed for understanding risk, performance, and system robustness in real-world scenarios. By combining modern Python techniques with a focus on reproducibility and automation, I wanted to make it easy for anyone—whether a scientist, engineer, or just a curious mind—to experiment, learn, and trust the results.</p>
+            <p>The project is fully automated and production-ready, designed to run smoothly and transparently in any environment.</p>
+            <hr/>
+            <h2>Project Overview</h2>
+            <p>
+                <strong>Monte Carlo Option Pricer</strong> is a robust, high-speed simulation engine for modeling financial options, designed to test system reliability and performance under real-world conditions. Born from a curiosity about how complex systems behave under uncertainty, this project makes it easy for anyone—scientist, engineer, or curious mind—to experiment, learn, and trust the results. With modern Python tools, just-in-time compilation, and full automation, it delivers fast, reproducible insights into risk and system behavior, and runs smoothly in any environment.
+            </p>
+            <hr/>
+            <h2>What Sets This Apart?</h2>
+            <ul style="margin-bottom: 1.5em;">
+                <li><strong>Real-World Data:</strong> Pulls in live market data to keep simulations grounded in reality, not just theory.</li>
+                <li><strong>Performance Focus:</strong> Uses just-in-time compilation to make large-scale experiments fast and interactive, so you can explore “what if?” questions without waiting.</li>
+                <li><strong>Risk & Reliability:</strong> Models uncertainty and system behavior, helping users see not just average outcomes, but the full range of possibilities and edge cases.</li>
+                <li><strong>Reproducibility & Automation:</strong> Every result can be reproduced and shared, thanks to automated testing, containerization, and continuous integration.</li>
+                <li><strong>Visual Storytelling:</strong> Generates clear, intuitive plots that make it easy to see how systems respond to change—inviting exploration and deeper understanding.</li>
+            </ul>
+            <hr/>
+            <h2>Skills Demonstrated</h2>
+            <ul style="margin-bottom: 1.5em;">
+                <li>Python for scientific computing and automation</li>
+                <li>Building and optimizing simulation engines</li>
+                <li>Modeling uncertainty and system behavior</li>
+                <li>Performance tuning and systems engineering</li>
+                <li>Automated testing, reproducibility, and deployment</li>
+            </ul>
+            <hr/>
+            <h2>Quickstart</h2>
+            <ol style="margin-bottom: 1.5em;">
+                <li>Clone the repo: <code>git clone https://github.com/Ryan-Cooley/quant-option-pricer</code></li>
+                <li>Install dependencies: <code>pip install -r requirements.txt</code> or use <code>environment.yml</code></li>
+                <li>Run the pricer: <code>python quant_option.py --ticker AAPL --S0 150 --K 155</code></li>
+                <li>Run the notebook: <code>jupyter notebook notebooks/QuantOptionDemo.ipynb</code></li>
+            </ol>
+            <hr/>
+            <h2>Sample Outputs & Explanations</h2>
+            <div class="project-image">
+              <img src="img/AAPL_returns.png" alt="AAPL Historical Log-Returns" style="max-width:100%; border-radius:8px;">
+              <p><em><strong>Asset Volatility:</strong> Daily log‑returns for AAPL over one year, used to estimate input volatilities.</em></p>
             </div>
             <div class="project-image">
-                <img src="img/pnl_histogram.png" alt="P&L Distribution with Risk Metrics">
+              <img src="img/convergence_v2.png" alt="Monte Carlo Convergence" style="max-width:100%; border-radius:8px;">
+              <p><em><strong>Convergence Analysis:</strong> How the Monte Carlo estimate approaches the analytical price as more paths are simulated—validating accuracy and performance.</em></p>
             </div>
-            <div class="project-description">
-                <h2>Why This Project?</h2>
-                <p>This project grew out of my curiosity about how complex systems behave under uncertainty and how we can build tools to explore those questions at scale. I set out to create a fast, reliable simulation engine that not only models financial options, but also serves as a testbed for understanding risk, performance, and system robustness in real-world scenarios. By combining modern Python techniques with a focus on reproducibility and automation, I wanted to make it easy for anyone—whether a scientist, engineer, or just a curious mind—to experiment, learn, and trust the results. The project is fully automated and production-ready, designed to run smoothly and transparently in any environment.</p>
-                <h2>Project Overview</h2>
-                <p>
-                    <strong>Quant Option Pricer</strong> is a high-performance Python platform for pricing European call options using both a Numba-accelerated Monte Carlo simulator and the analytical Black-Scholes model. It features advanced risk analysis, performance benchmarking, and publication-quality visualizations. The codebase is modular, CI-tested, and ready for integration into larger quant research pipelines.
-                </p>
-                <h2>What Sets This Apart?</h2>
-                <ul>
-                    <li><strong>Real-World Data:</strong> Pulls in live market data to keep simulations grounded in reality, not just theory.</li>
-                    <li><strong>Performance Focus:</strong> Uses just-in-time compilation to make large-scale experiments fast and interactive, so you can explore “what if?” questions without waiting.</li>
-                    <li><strong>Risk & Reliability:</strong> Models uncertainty and system behavior, helping users see not just average outcomes, but the full range of possibilities and edge cases.</li>
-                    <li><strong>Reproducibility & Automation:</strong> Every result can be reproduced and shared, thanks to automated testing, containerization, and continuous integration.</li>
-                    <li><strong>Visual Storytelling:</strong> Generates clear, intuitive plots that make it easy to see how systems respond to change—inviting exploration and deeper understanding.</li>
-                </ul>
-                <h2>Skills Demonstrated</h2>
-                <ul>
-                    <li>Python for scientific computing and automation</li>
-                    <li>Building and optimizing simulation engines</li>
-                    <li>Modeling uncertainty and system behavior</li>
-                    <li>Performance tuning and systems engineering</li>
-                    <li>Automated testing, reproducibility, and deployment</li>
-                </ul>
-                <h2>Quickstart</h2>
-                <ol>
-                    <li>Clone the repo: <code>git clone https://github.com/Ryan-Cooley/MonteCarlo</code></li>
-                    <li>Install dependencies: <code>pip install -r requirements.txt</code> or use <code>environment.yml</code></li>
-                    <li>Run the pricer: <code>python quant_option.py --ticker AAPL --S0 150 --K 155</code></li>
-                    <li>Run the notebook: <code>jupyter notebook notebooks/QuantOptionDemo.ipynb</code></li>
-                </ol>
-                <h2>Sample Outputs & Explanations</h2>
-                <div class="project-image">
-                    <img src="img/AAPL_returns.png" alt="AAPL Historical Log-Returns" style="max-width: 100%; border-radius: 8px;">
-                    <p><em><strong>Historical Log-Returns:</strong> Daily log-returns of the underlying asset (AAPL) over the past year. Used to estimate annualized volatility, a critical input for option pricing models.</em></p>
-                </div>
-                <div class="project-image">
-                    <img src="img/convergence_v2.png" alt="Monte Carlo Convergence" style="max-width: 100%; border-radius: 8px;">
-                    <p><em><strong>Monte Carlo Convergence:</strong> Shows the convergence of the Monte Carlo price estimate to the analytical Black-Scholes price as the number of simulated paths increases. Demonstrates the Law of Large Numbers and validates the MC implementation.</em></p>
-                </div>
-                <div class="project-image">
-                    <img src="img/pnl_histogram.png" alt="P&L Distribution with Risk Metrics" style="max-width: 100%; border-radius: 8px;">
-                    <p><em><strong>P&L Distribution with Risk Metrics:</strong> Histogram of simulated Profit and Loss (P&L) at option expiry, with VaR and CVaR marked. Quantifies downside risk of the option position.</em></p>
-                </div>
-                <div class="project-image">
-                    <img src="img/delta_surface.png" alt="Delta Surface" style="max-width: 100%; border-radius: 8px;">
-                    <p><em><strong>Delta Surface:</strong> 3D surface of the option's Delta across spot prices and volatilities. Visualizes how the option's value changes with the underlying asset's price and volatility.</em></p>
-                </div>
-                <div class="project-image">
-                    <img src="img/vega_surface.png" alt="Vega Surface" style="max-width: 100%; border-radius: 8px;">
-                    <p><em><strong>Vega Surface:</strong> 3D surface of the option's Vega across spot prices and volatilities. Shows sensitivity of the option price to changes in volatility, essential for risk management.</em></p>
-                </div>
-                <h2>Why It Matters</h2>
-                <ul>
-                    <li>Demonstrates advanced quantitative finance and risk management in Python</li>
-                    <li>Showcases high-performance scientific computing (Numba, Matplotlib, Docker)</li>
-                    <li>Highlights robust software engineering with testing and CI/CD</li>
-                </ul>
+            <div class="project-image">
+              <img src="img/pnl_histogram.png" alt="P&L Distribution with Risk Metrics" style="max-width:100%; border-radius:8px;">
+              <p><em><strong>Risk Distribution:</strong> Profit & Loss histogram at expiry, highlighting potential losses and tail risks.</em></p>
             </div>
+      
+            <h2>Why It Matters</h2>
+            <ul>
+              <li>Demonstrates scalable, high‑performance computational modeling</li>
+              <li>Illustrates systems‑level thinking: from data ingestion to automated deployment</li>
+              <li>Showcases best practices in reproducible research and software engineering</li>
+            </ul>
+          </div>
         </div>
-    </div>
-
+      </div>
     <div id="tip3p-modal" class="project-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="project-header">
-                <div class="header-title-section">
-                    <h1>TIP3P Water Box Simulation</h1>
-                    <a href="https://github.com/Ryan-Cooley/TIP3P-Water-Simulation" target="_blank" class="github-link" title="View on GitHub">
-                        <i class="fab fa-github"></i>
-                        <span class="github-text">View Code</span>
-                    </a>
-                </div>
-                <p class="project-category">Molecular Dynamics</p>
-            </div>
-            
-            <div class="project-image">
-                <img src="TIP3P-Water-Sim/simulation_output/trajectory.gif" alt="TIP3P Water Box Trajectory">
-            </div>
-            
-            <div class="project-description">
-                <h2>Project Overview</h2>
-                <p>This simulation models the behavior of water molecules using the TIP3P (Transferable Intermolecular Potential with 3 Points) model, which is widely used in computational chemistry due to its efficiency and reasonable accuracy in representing water’s physical properties.</p>
-                
-                <p>The TIP3P water box is visualized using VMD (Visual Molecular Dynamics), showcasing how water molecules interact within a confined space over time. This provides insight into their behavior under realistic, periodic conditions.</p>
-                
-                <h2>Technical Details</h2>
-                <p>The simulation was built and run using the OpenMM toolkit, a powerful engine for molecular simulations. System setup was performed using AmberTools, and custom Python scripts were developed for analysis and visualization.</p>
-                
-                <h3>Simulation Components:</h3>
-                <ul>
-                    <li><strong>Water Box Setup (Leap):</strong> AmberTools script to generate a TIP3P water box with periodic boundary conditions</li>
-                    <li><strong>Molecular Dynamics Simulation:</strong> OpenMM Python script with energy minimization, equilibration, and production phases</li>
-                    <li><strong>Distance Analysis:</strong> MDTraj-based Python script to compute nearest-neighbor distances between water oxygens</li>
-                    <li><strong>Periodic Boundary Analysis:</strong> Extended distance analysis accounting for periodic boundary conditions</li>
-                    <li><strong>Data Visualization:</strong> Python script to generate histograms and plots using NumPy and Matplotlib</li>
-                </ul>
-                
-                <h2>Analysis Results</h2>
-                <div class="project-image">
-                    <img src="TIP3P-Water-Sim/simulation_output/nearest_distances_histogram_waterbox.png" alt="Distance Analysis Results">
-                    <p><em>Histogram of nearest-neighbor distances between water oxygens, illustrating the molecular spacing and statistical distribution.</em></p>
-                </div>
-                
-                <h2>Downloads</h2>
-                <div class="download-buttons">
-                    <a href="TIP3P-Water-Sim/tip3p_molecular_dynamics_simulation.py" download class="main-btn">
-                        <span class="btn-text">Molecular Dynamics Simulation</span>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
-                    </a>
-                    <a href="TIP3P-Water-Sim/tip3p_water_box_setup.leap" download class="main-btn">
-                        <span class="btn-text">Water Box Setup (Leap)</span>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
-                    </a>
-                    <a href="TIP3P-Water-Sim/tip3p_distance_analysis.py" download class="main-btn">
-                        <span class="btn-text">Distance Analysis</span>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
-                    </a>
-                    <a href="TIP3P-Water-Sim/tip3p_periodic_boundary_analysis.py" download class="main-btn">
-                        <span class="btn-text">Periodic Boundary Analysis</span>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
-                    </a>
-                    <a href="TIP3P-Water-Sim/tip3p_data_visualization.py" download class="main-btn">
-                        <span class="btn-text">Data Visualization</span>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
-                    </a>
-                </div>
-                
-                <h2>How to Run</h2>
-                <p>To run the molecular dynamics simulation:</p>
-                <ol>
-                    <li>Download all Python scripts and the Leap file</li>
-                    <li>Install required packages: <code>pip install openmm parmed numpy matplotlib mdtraj</code></li>
-                    <li>Set up the water box: <code>tleap -f TIP3P-Water-Sim/tip3p_water_box_setup.leap</code></li>
-                    <li>Run the simulation: <code>python TIP3P-Water-Sim/tip3p_molecular_dynamics_simulation.py</code></li>
-                    <li>Analyze results: <code>python TIP3P-Water-Sim/tip3p_distance_analysis.py</code> and <code>python TIP3P-Water-Sim/tip3p_periodic_boundary_analysis.py</code></li>
-                    <li>Generate visualizations: <code>python TIP3P-Water-Sim/tip3p_data_visualization.py</code></li>
-                    <li>Visualize trajectory using VMD or similar software</li>
-                </ol>
-                
-                <h2>Simulation Details</h2>
-                <ul>
-                    <li><strong>Temperature:</strong> 300 K (room temperature)</li>
-                    <li><strong>Integration:</strong> Langevin dynamics with 1/ps friction</li>
-                    <li><strong>Time Step:</strong> 0.002 ps (2 femtoseconds)</li>
-                    <li><strong>Equilibration:</strong> 100 ps (50,000 steps)</li>
-                    <li><strong>Production:</strong> 20,000 ps (10,000,000 steps)</li>
-                    <li><strong>Periodic Boundary Conditions:</strong> PME (Particle Mesh Ewald) method</li>
-                    <li><strong>Non-bonded Cutoff:</strong> 1.0 nanometer</li>
-                </ul>
-                
-                <p><strong>Note:</strong> This project showcases modern scientific computing, including molecular simulation, data analysis, and statistical visualization — all conducted using open-source tools like OpenMM, AmberTools, MDTraj, and Matplotlib.</p>
-            </div>
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+
+        <div class="project-header">
+          <div class="header-title-section">
+            <h1>TIP3P Water Box Simulation</h1>
+            <a href="https://github.com/Ryan-Cooley/TIP3P-Water-Simulation" target="_blank" class="github-link" title="View on GitHub">
+              <i class="fab fa-github"></i>
+              <span class="github-text">View Code</span>
+            </a>
+          </div>
+          <p class="project-category">Python • Computational Chemistry & Systems Analysis</p>
         </div>
+
+        <div class="project-image">
+          <img src="TIP3P-Water-Sim/simulation_output/trajectory.gif" alt="TIP3P Water Box Trajectory">
+        </div>
+
+        <div class="project-description">
+          <h2>Why This Project?</h2>
+          <p>
+            I wanted to understand how water molecules self-organize under realistic conditions and build a reusable workflow for analyzing molecular systems. By combining OpenMM’s simulation engine with custom Python analysis scripts, this project demonstrates end-to-end systems thinking—from model setup and execution to automated data processing and visualization.
+          </p>
+          <hr/>
+          <h2>Project Overview</h2>
+          <p>
+            <strong>TIP3P Water Box Simulation</strong> uses AmberTools to generate a cubic box of TIP3P water molecules, runs dynamics via OpenMM, and employs MDTraj and Matplotlib for statistical analysis and plots. The codebase is modular, fully reproducible, and container-ready for easy sharing and extension.
+          </p>
+          <hr/>
+          <h2>Key Advantages</h2>
+          <ul style="margin-bottom: 1.5em;">
+            <li><strong>Accurate & Efficient:</strong> Leverages the TIP3P model and Particle Mesh Ewald to balance computational cost and physical fidelity.</li>
+            <li><strong>End-to-End Automation:</strong> Scripts automate box setup, simulation, analysis, and figure generation—eliminating manual steps.</li>
+            <li><strong>Systems Insight:</strong> Nearest‑neighbor distance histograms and trajectory visuals reveal molecular packing and dynamic behavior.</li>
+            <li><strong>Reproducibility:</strong> Configuration files, environment specs, and containerization ensure others can reproduce results exactly.</li>
+            <li><strong>Extensible Framework:</strong> Easily swap in different force fields or analysis metrics for broader molecular-system studies.</li>
+          </ul>
+          <hr/>
+          <h2>Skills Demonstrated</h2>
+          <ul style="margin-bottom: 1.5em;">
+            <li>Setting up and running molecular dynamics with OpenMM & AmberTools</li>
+            <li>Writing Python scripts for data extraction, statistical analysis, and plotting</li>
+            <li>Applying systems-level thinking to automate complex workflows</li>
+            <li>Ensuring reproducibility via environment files and containerization</li>
+            <li>Visual storytelling through interactive GIFs and publication-ready plots</li>
+          </ul>
+          <hr/>
+          <h2>Quickstart</h2>
+          <ol style="margin-bottom: 1.5em;">
+            <li>Clone the repo: <code>git clone https://github.com/Ryan-Cooley/TIP3P-Water-Simulation.git</code></li>
+            <li>Install dependencies: <code>pip install -r requirements.txt</code> (or use <code>environment.yml</code>)</li>
+            <li>Generate the water box: <code>tleap -f tip3p_water_box_setup.leap</code></li>
+            <li>Run dynamics: <code>python tip3p_molecular_dynamics_simulation.py</code></li>
+            <li>Analyze distances: <code>python tip3p_distance_analysis.py</code></li>
+            <li>Visualize results: <code>python tip3p_data_visualization.py</code></li>
+            <li>View trajectory: open <code>trajectory.gif</code> or load the DCD in VMD</li>
+          </ol>
+          <hr/>
+          <h2>Sample Outputs</h2>
+          <div class="project-image">
+            <img src="TIP3P-Water-Sim/simulation_output/nearest_distances_histogram_waterbox.png" alt="Nearest-Neighbor Distance Histogram" style="max-width:100%; border-radius:8px;">
+            <p><em><strong>Molecular Spacing:</strong> Histogram of nearest‑neighbor oxygen–oxygen distances, showing the characteristic 0.28 nm peak of liquid water.</em></p>
+          </div>
+          <hr/>
+          <h2>Why It Matters</h2>
+          <ul style="margin-bottom: 1.5em;">
+            <li>Demonstrates scalable molecular dynamics workflows for computational chemistry</li>
+            <li>Highlights systems engineering: from input preparation through automated analysis</li>
+            <li>Provides a template for reliable, reproducible scientific research using open‑source tools</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <div id="snake-modal" class="project-modal">
@@ -397,20 +379,10 @@
             <div class="project-description">
                 <h2>Project Overview</h2>
                 <p>A classic Snake game implemented in Python with the <code>turtle</code> graphics library. Guide your snake to eat food, grow longer, and rack up points—while steering clear of walls and your own tail!</p>
-                
-                <p>Inspired by Angela Yu’s <em>100 Days of Code: The Complete Python Pro Bootcamp</em>, this project showcases key programming principles:</p>
-                
-                <ul>
-                    <li><strong>Object-Oriented Design:</strong> Encapsulate game elements in reusable classes</li>
-                    <li><strong>Event Handling:</strong> Capture and respond to keyboard input for smooth movement</li>
-                    <li><strong>Main Game Loop:</strong> Continuously update and render game state</li>
-                    <li><strong>Collision Detection:</strong> Detect and handle collisions with walls or the snake itself</li>
-                    <li><strong>Score Management:</strong> Track and display your current score in real time</li>
-                </ul>
-                
+                <hr/>
                 <h2>Project Structure</h2>
                 <p>The codebase is split into two modules for clarity and maintainability:</p>
-                
+                <hr/>
                 <h3>Main Game File (<code>snake.py</code>)</h3>
                 <p>Entry point to launch the game, containing:</p>
                 <ul>
@@ -419,7 +391,7 @@
                     <li>Collision checks and game-over logic</li>
                     <li>High-score display and reset handling</li>
                 </ul>
-                
+                <hr/>
                 <h3>Classes Module (<code>snake_game_classes.py</code>)</h3>
                 <p>Defines the core game objects:</p>
                 <ul>
@@ -427,7 +399,7 @@
                     <li><strong>Food:</strong> Randomly places food items on the screen and handles respawning</li>
                     <li><strong>ScoreBoard:</strong> Keeps track of and renders the player’s score at the top of the screen</li>
                 </ul>
-                
+                <hr/>
                 <h2>Downloads</h2>
                 <div class="download-buttons">
                     <a href="Snake_Game/snake.py" download class="main-btn">
@@ -439,9 +411,8 @@
                         <span class="btn-icon"><i class="fas fa-download"></i></span>
                     </a>
                 </div>
-                
+                <hr/>
                 <h2>How to Run</h2>
-                <p>To start playing:</p>
                 <ol>
                     <li>Download both <code>Snake_Game/snake.py</code> and <code>Snake_Game/snake_game_classes.py</code></li>
                     <li>Ensure you have Python 3 installed</li>
@@ -449,7 +420,6 @@
                     <li>Navigate to the folder containing the files</li>
                     <li>Execute: <code>python Snake_Game/snake.py</code></li>
                 </ol>
-                
                 <p><strong>Note:</strong> Both files are required—<code>Snake_Game/snake.py</code> imports classes from <code>Snake_Game/snake_game_classes.py</code>.</p>
                 <p><strong>Disclaimer:</strong> This game is a simple educational project and may have some quirks—such as food sometimes appearing near the edge, or the score being displayed at the top. For best results, run it in a standard Python environment with the <code>turtle</code> module installed.</p>
             </div>
@@ -476,7 +446,7 @@
             <div class="project-description">
                 <h2>Project Overview</h2>
                 <p>During my Summer 2025 Metrology Retention internship at Entegris, I built a suite of VBA macros to automate the processing, analysis, and reporting of structured data from a central Excel worksheet. This solution filters and reshapes raw inputs, calculates key statistics (sums, standard deviations), flags high-variance results, and generates request-specific, color-coded reports with embedded charts—each exported to its own workbook. It reduced the end-to-end task time from about 38 minutes to under 3 minutes, making it over 1200% more efficient.</p>
-                
+                <hr/>
                 <h2>Technical Implementation</h2>
                 <ul>
                     <li><strong>Data Transformation:</strong> Automated cleaning, filtering, and reshaping of raw datasets into analysis-ready tables</li>
@@ -485,7 +455,7 @@
                     <li><strong>Error Handling:</strong> Implemented validation routines and logging to catch and report data anomalies</li>
                     <li><strong>Workbook Automation:</strong> Programmatically generated and saved separate workbooks for each report request</li>
                 </ul>
-                
+                <hr/>
                 <h2>Impact & Results</h2>
                 <ul>
                     <li><strong>Over 1200% More Efficient:</strong> Cut task duration from ~38 minutes to under 3 minutes</li>
@@ -493,7 +463,7 @@
                     <li><strong>Scalable Framework:</strong> Modular macros designed for reuse in other workflows</li>
                     <li><strong>Faster Data Review:</strong> Shortened review cycles, enabling more timely insights</li>
                 </ul>
-                
+                <hr/>
                 <h2>Skills & Tools</h2>
                 <ul>
                     <li>Advanced VBA Programming & Excel Object Model</li>
@@ -502,7 +472,6 @@
                     <li>Error Handling & Logging in VBA</li>
                     <li>Process Optimization & Documentation</li>
                 </ul>
-                
                 <p><em>Note: Developed as part of my internship at Entegris, demonstrating real-world automation of critical metrology data workflows.</em></p>
             </div>
         </div>
@@ -522,7 +491,7 @@
             <div class="project-description">
                 <h2>Project Overview</h2>
                 <p>A console-based C++ implementation of the popular card game <em>Sushi Go!</em>, developed as part of a university programming course. This project demonstrates solid object-oriented design, robust game logic, and proficiency with C++ best practices.</p>
-
+                <hr/>
                 <h2>Technical Details</h2>
                 <p>Key programming concepts and techniques showcased:</p>
                 <ul>
@@ -532,7 +501,7 @@
                     <li><strong>Console I/O:</strong> Text-based user interface for menu prompts, card selection, and real-time score feedback</li>
                     <li><strong>Error Handling & Testing:</strong> Input validation, unit-style diff testing with sample decks, and memory safety checks</li>
                 </ul>
-
+                <hr/>
                 <h2>Learning Outcomes</h2>
                 <p>This academic assignment provided hands-on experience in:</p>
                 <ul>
@@ -541,7 +510,6 @@
                     <li>Writing comprehensive tests using diff comparisons against demo outputs</li>
                     <li>Documenting code contracts, adhering to style guidelines, and managing large-scale C++ projects</li>
                 </ul>
-
                 <p><em>Note: As this was submitted for a university course, detailed source code is not publicly available.</em></p>
             </div>
         </div>
@@ -561,10 +529,9 @@
             <div class="project-description">
                 <h2>Certification Overview</h2>
                 <p>The PCEP (Certified Entry-Level Python Programmer) certification is a professional credential that validates fundamental Python programming skills. This certification demonstrates proficiency in Python syntax, data types, control structures, and basic programming concepts.</p>
-                
+                <hr/>
                 <h2>What PCEP Covers</h2>
                 <p>The PCEP certification validates knowledge in:</p>
-                
                 <ul>
                     <li><strong>Python Fundamentals:</strong> Variables, data types, operators, and expressions</li>
                     <li><strong>Control Structures:</strong> Conditional statements, loops, and flow control</li>
@@ -573,17 +540,15 @@
                     <li><strong>Exception Handling:</strong> Basic error handling and debugging</li>
                     <li><strong>File Operations:</strong> Reading and writing files in Python</li>
                 </ul>
-                
+                <hr/>
                 <h2>Why This Matters</h2>
                 <p>Earning the PCEP certification demonstrates:</p>
-                
                 <ul>
                     <li>Solid foundation in Python programming</li>
                     <li>Commitment to professional development</li>
                     <li>Industry-recognized programming skills</li>
                     <li>Readiness for more advanced Python certifications</li>
                 </ul>
-                
                 <p>This certification serves as a stepping stone toward more advanced Python certifications like PCAP (Certified Associate in Python Programming) and PCPP (Certified Professional in Python Programming).</p>
             </div>
         </div>
@@ -596,16 +561,14 @@
                 <h1>Ham Radio Technician License</h1>
                 <p class="project-category">FCC License</p>
             </div>
-            
             <div class="project-image">
                 <img src="img/HamRadioConfirmation.jpg" alt="FCC Technician License Badge">
                 <img src="img/CallSign.png" alt="FCC Technician License Call Sign" style="margin-top: 1rem; max-width: 80%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);">
             </div>
-            
             <div class="project-description">
                 <h2>License Overview</h2>
                 <p>In 2025, I earned the FCC Amateur Radio Technician License to support my future role as Communications &amp; Ground Station Lead for the CubeSat Club. I'm currently researching ground-station hardware and studying uplink/downlink protocols in preparation for upcoming mission work.</p>
-                
+                <hr/>
                 <h2>What the Technician License Allows</h2>
                 <p>With this license, I'm qualified to:</p>
                 <ul>
@@ -614,7 +577,7 @@
                     <li><strong>Access Amateur Satellites:</strong> Plan for uplinking commands and downlinking telemetry from cubesats</li>
                     <li><strong>Build &amp; Modify Equipment:</strong> Evaluate and assemble radio hardware within FCC guidelines</li>
                 </ul>
-                
+                <hr/>
                 <h2>Technical Knowledge Covered</h2>
                 <p>The Technician exam tested my understanding of:</p>
                 <ul>
@@ -624,7 +587,7 @@
                     <li><strong>Safety Practices:</strong> Electrical safety, grounding, and RF exposure limits</li>
                     <li><strong>Emergency Communications:</strong> Roles in public-service and disaster-response networks</li>
                 </ul>
-                
+                <hr/>
                 <h2>Next Steps for CubeSat Comms</h2>
                 <ul>
                     <li>Researching antenna designs, transceiver modules, and ground-station software</li>

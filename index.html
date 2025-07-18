@@ -267,6 +267,24 @@
             </p>
             <hr/>
             <h2>Visualizations</h2>
+            <div class="project-image" style="display:flex; flex-direction:column; align-items:center; justify-content:center; margin-bottom:2em;">
+              <p style="font-size:1.5em; font-weight:800; text-align:center; margin-bottom:0.2em; color:#fff;"><strong>Key Results</strong></p>
+              <div style="text-align:center; font-size:1.08em; margin-bottom:1em; color:#fff;">(MSFT, K=150, T=0.5, r=0.03, 200,000 paths)</div>
+              <table style="margin:0 auto; background:#f6f6f6; border-radius:14px; box-shadow:0 1px 3px rgba(0,0,0,0.06); border-collapse:separate; border-spacing:0; overflow:hidden; min-width:270px; color:#222;">
+                <thead>
+                  <tr><th style="text-align:center; padding:10px 22px; border-bottom:1px solid #ececec; font-weight:700; background:#ededed; color:#222;">Metric</th><th style="text-align:center; padding:10px 22px; border-bottom:1px solid #ececec; font-weight:700; background:#ededed; color:#222;">Value</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td style="padding:10px 22px; text-align:center;">Mean P&amp;L</td><td style="padding:10px 22px; text-align:center;">-0.1052</td></tr>
+                  <tr><td style="padding:10px 22px; text-align:center;">VaR (5%)</td><td style="padding:10px 22px; text-align:center;">15.6921</td></tr>
+                  <tr><td style="padding:10px 22px; text-align:center;">CVaR (5%)</td><td style="padding:10px 22px; text-align:center;">15.6921</td></tr>
+                  <tr><td style="padding:10px 22px; text-align:center;">Δ per $1 move</td><td style="padding:10px 22px; text-align:center;">0.5646</td></tr>
+                  <tr><td style="padding:10px 22px; text-align:center;">Δ accuracy</td><td style="padding:10px 22px; text-align:center;">0.20% error</td></tr>
+                  <tr><td style="padding:10px 22px; text-align:center;">Numba Speedup</td><td style="padding:10px 22px; text-align:center;">100x+</td></tr>
+                </tbody>
+              </table>
+              <p><em><strong>Key Results Table:</strong> Summary of core risk and performance metrics for a representative MSFT call option scenario.</em></p>
+            </div>
             <div class="project-image">
               <img src="img/AAPL_returns.png" alt="AAPL Historical Log-Returns" style="max-width:100%; border-radius:8px;">
               <p><em><strong>Asset Volatility:</strong> Daily log‑returns for AAPL over one year, used to estimate input volatilities.</em></p>
@@ -349,27 +367,6 @@
 </code></pre>
           <hr/>
           <h2>Visualizations</h2>
-          <div class="project-image">
-            <pre>
-Running backtest for SPY
-Date range: 2015-01-01 to 2024-01-01
-SMA pair: 20/50
-Initial cash: $100,000
-Transaction cost: 0.0010
---------------------------------------------------
-Fetched data for SPY from Stooq.
-Results:
-  Cumulative Return: 0.00%
-  Sharpe Ratio:      0.04
-  Max Drawdown:      -0.03%
-  Final Portfolio:   $100,003
-  Total Return:      $3
-  Number of Trades:  92.0
-  Win Rate:          54.55%
-  Data Points:       2264
-            </pre>
-            <p><em><strong>Sample Backtest Output:</strong> Console output from running the SMA 20/50 crossover strategy on SPY (2015–2024).</em></p>
-          </div>
           <div class="project-image">
             <img src="img/sma_dashboard_SPY_20_50.png" alt="SMA Dashboard SPY 20/50 (Static)" style="max-width:100%; border-radius:8px;">
             <p><em><strong>Comprehensive Dashboard (Static):</strong> Four‑panel view of price/signals, equity curve, drawdown, and rolling Sharpe for SPY’s 20/50 SMA crossover.</em></p>

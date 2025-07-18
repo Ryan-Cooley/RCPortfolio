@@ -123,12 +123,12 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio-item" data-project="snake">
+            <div class="portfolio-item" data-project="sma">
                 <div class="image">
-                    <img src="img/snake_image.png" alt="Snake Game">
+                    <img src="img/sma_dashboard_SPY_20_50.png" alt="SMA Crossover Backtester">
                     <div class="hover-overlay">
-                        <h3>Snake Game</h3>
-                        <p>Python Programming</p>
+                        <h3>SMA Crossover Backtester</h3>
+                        <p>Python Quantitative Finance</p>
                     </div>
                 </div>
             </div>
@@ -138,6 +138,15 @@
                     <div class="hover-overlay">
                         <h3>VBA Data Processing Automation</h3>
                         <p>Excel Automation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-project="snake">
+                <div class="image">
+                    <img src="img/snake_image.png" alt="Snake Game">
+                    <div class="hover-overlay">
+                        <h3>Snake Game</h3>
+                        <p>Python Programming</p>
                     </div>
                 </div>
             </div>
@@ -288,69 +297,127 @@
           </div>
         </div>
       </div>
-    <div id="tip3p-modal" class="project-modal">
+    <div id="sma-modal" class="project-modal">
       <div class="modal-content">
         <span class="close-modal">&times;</span>
-
         <div class="project-header">
           <div class="header-title-section">
-            <h1>TIP3P Water Box Simulation</h1>
-            <a href="https://github.com/Ryan-Cooley/TIP3P-Water-Simulation" target="_blank" class="github-link" title="View on GitHub">
+            <h1>SMA Crossover Backtester</h1>
+            <a href="https://github.com/Ryan-Cooley/SMA_Backtester" target="_blank" class="github-link" title="View on GitHub">
               <i class="fab fa-github"></i>
               <span class="github-text">View Code</span>
             </a>
           </div>
-          <p class="project-category">Python • Molecular Dynamics • Scientific Computing</p>
+          <p class="project-category">Python • Quantitative Finance • Backtesting</p>
         </div>
-
         <div class="project-image">
-          <img src="img/trajectory.gif" alt="TIP3P Water Box Trajectory">
+          <img src="img/sma_dashboard_SPY_20_50.png" alt="SMA Crossover Backtester Dashboard">
         </div>
-
         <div class="project-description">
           <h2>Project Overview</h2>
           <p>
-            This project simulates the behavior of water molecules at the atomic level to reveal how they self-organize and interact. It provides a complete, end-to-end workflow for molecular dynamics research, demonstrating how to set up a simulation, run it on high-performance computing platforms, and analyze the results. The entire process is automated and reproducible, creating a powerful and accessible tool for computational chemistry.
+            The SMA Crossover Backtester is a production‑ready Python framework for designing, testing, and tuning moving‑average crossover strategies. It seamlessly switches between Stooq and yfinance for reliable data, offers interactive ipywidgets dashboards and dynamic visuals, and automates parameter sweeps—empowering both research and live‑system workflows.
           </p>
           <hr/>
           <h2>Key Features</h2>
           <ul style="margin-bottom: 1.5em;">
-            <li><strong>Accurate Molecular Modeling:</strong> Uses the industry-standard TIP3P water model and advanced simulation techniques (Particle Mesh Ewald) to ensure physically realistic results.</li>
-            <li><strong>End-to-End Automation:</strong> The entire workflow is scripted, from initial system setup with AmberTools to running the simulation with OpenMM and generating final plots.</li>
-            <li><strong>Insightful Data Analysis:</strong> Automatically calculates and visualizes key structural properties, like the radial distribution function, to reveal the signature patterns of liquid water.</li>
-            <li><strong>Reproducible Science:</strong> The project is fully containerized with Docker and includes detailed environment specifications, ensuring that the results are verifiable and consistent.</li>
-            <li><strong>Extensible Framework:</strong> The modular design makes it easy to adapt the workflow for simulating other molecular systems or exploring new scientific questions.</li>
+            <li><strong>Reliable Data Sources:</strong> Primary Stooq with yfinance fallback ensures uninterrupted historical pricing.</li>
+            <li><strong>Interactive Dashboard:</strong> Real‑time parameter adjustment and instant feedback via ipywidgets.</li>
+            <li><strong>Dynamic Visuals:</strong> Four‑panel display of price &amp; signals, equity curve, drawdown, and rolling Sharpe ratio.</li>
+            <li><strong>Automated Optimization:</strong> Grid‑search for ideal SMA windows, with results exportable to CSV.</li>
+            <li><strong>Robust Metrics:</strong> Sharpe ratio, max drawdown, rolling performance, and more.</li>
+            <li><strong>Dual Interfaces:</strong> Command‑line tool and Jupyter Notebook support for flexible use cases.</li>
+            <li><strong>Modular Architecture:</strong> Clean separation of data ingestion, indicator logic, signal generation, backtesting, and risk analysis.</li>
           </ul>
           <hr/>
           <h2>Technical Skills</h2>
           <ul style="margin-bottom: 1.5em;">
-            <li><strong>Python:</strong> Scientific computing (MDTraj, NumPy), data visualization (Matplotlib), and workflow automation.</li>
-            <li><strong>Molecular Dynamics:</strong> Simulation setup and execution with OpenMM, AmberTools, and industry-standard force fields.</li>
-            <li><strong>Systems Engineering:</strong> Building automated, end-to-end pipelines for scientific research.</li>
-            <li><strong>Reproducibility:</strong> Environment management with Conda and containerization with Docker to ensure scientific validity.</li>
+            <li><strong>Python:</strong> pandas for data handling, matplotlib for plotting, and automated scripting.</li>
+            <li><strong>Quantitative Finance:</strong> Strategy backtesting, risk assessment, and performance benchmarking.</li>
+            <li><strong>Software Engineering:</strong> Modular design, unit testing, and reproducible workflows.</li>
+            <li><strong>Interactive Analysis:</strong> Jupyter Notebooks with ipywidgets for exploratory work.</li>
           </ul>
           <hr/>
           <h2>Technical Details</h2>
           <p>
-            The simulation generates a trajectory file that can be visualized in standard molecular graphics programs like VMD, allowing for an interactive exploration of the results. The analysis scripts produce publication-quality plots that are ready for inclusion in scientific reports.
+            Functionality is organized into dedicated modules for data loading, indicator computation, signal logic, backtesting, and performance analysis. The suite supports both programmatic imports and CLI execution, and includes a full test suite to ensure reliability. Interactive notebooks enable on‑the‑fly parameter tuning with instant visualization updates.
           </p>
           <hr/>
           <h2>Visualizations</h2>
           <div class="project-image">
-            <img src="img/nearest_distances_histogram_waterbox.png" alt="Nearest-Neighbor Distance Histogram" style="max-width:100%; border-radius:8px;">
-            <p><em><strong>Molecular Spacing:</strong> A histogram of the distances between neighboring oxygen atoms, showing the characteristic 0.28 nm peak that defines the structure of liquid water.</em></p>
+            <img src="img/sma_dashboard_SPY_20_50.png" alt="SMA Dashboard SPY 20/50" style="max-width:100%; border-radius:8px;">
+            <p><em><strong>Comprehensive Dashboard:</strong> Four‑panel view of price/signals, equity curve, drawdown, and rolling Sharpe for SPY’s 20/50 SMA crossover.</em></p>
+          </div>
+          <div class="project-image">
+            <img src="img/sma_dashboard_AAPL_20_50.png" alt="SMA Dashboard AAPL 20/50" style="max-width:100%; border-radius:8px;">
+            <p><em><strong>Multi‑Asset Flexibility:</strong> AAPL dashboard demonstrating adaptability across different tickers.</em></p>
+          </div>
+          <div class="project-image">
+            <img src="img/sma_dashboard_QQQ_10_30.png" alt="SMA Dashboard QQQ 10/30" style="max-width:100%; border-radius:8px;">
+            <p><em><strong>Parameter Exploration:</strong> QQQ 10/30 SMA grid search showcasing automated optimization.</em></p>
           </div>
           <hr/>
           <h2>Project Significance</h2>
           <ul style="margin-bottom: 1.5em;">
-            <li>Demonstrates a scalable and automated workflow for complex molecular dynamics simulations.</li>
-            <li>Highlights a systems-engineering approach to scientific research, from initial setup to final analysis.</li>
-            <li>Provides a reliable and reproducible template for conducting computational chemistry research with open-source tools.</li>
+            <li>Exemplifies professional‑grade systematic trading research and implementation.</li>
+            <li>Highlights best practices in modular Python development and test‑driven design.</li>
+            <li>Provides a robust template for building, backtesting, and optimizing algorithmic strategies.</li>
           </ul>
         </div>
       </div>
     </div>
-
+    <div id="vba-modal" class="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="project-header">
+                <div class="header-title-section">
+                    <h1>VBA Data Processing Automation</h1>
+                    <a href="https://github.com/Ryan-Cooley/VBA_Automation" target="_blank" class="github-link" title="View on GitHub">
+                        <i class="fab fa-github"></i>
+                        <span class="github-text">View Code</span>
+                    </a>
+                </div>
+                <p class="project-category">Excel Automation (Entegris, Summer 2025 Intern)</p>
+            </div>
+            
+            <div class="project-image">
+                <img src="img/VBA_Master_Macro.png" alt="VBA Data Processing Automation">
+            </div>
+            
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>During my Summer 2025 Metrology Retention internship at Entegris, I built a suite of VBA macros to automate the processing, analysis, and reporting of structured data from a central Excel worksheet. This solution filters and reshapes raw inputs, calculates key statistics (sums, standard deviations), flags high-variance results, and generates request-specific, color-coded reports with embedded charts—each exported to its own workbook. It reduced the end-to-end task time from about 38 minutes to under 3 minutes, making it over 1200% more efficient.</p>
+                <hr/>
+                <h2>Key Features</h2>
+                <ul style="margin-bottom: 1.5em;">
+                    <li><strong>Data Transformation:</strong> Automated cleaning, filtering, and reshaping of raw datasets into analysis-ready tables</li>
+                    <li><strong>Statistical Analysis:</strong> Computed sums, averages, standard deviations, and variance flags via VBA functions</li>
+                    <li><strong>Dynamic Reporting:</strong> Assembled parameterized reports—formatted with consistent layouts, color coding, and embedded charts</li>
+                    <li><strong>Error Handling:</strong> Implemented validation routines and logging to catch and report data anomalies</li>
+                    <li><strong>Workbook Automation:</strong> Programmatically generated and saved separate workbooks for each report request</li>
+                </ul>
+                <hr/>
+                <h2>Technical Skills</h2>
+                <ul style="margin-bottom: 1.5em;">
+                    <li><strong>VBA Programming:</strong> Advanced Excel automation, object model manipulation, and macro development</li>
+                    <li><strong>Data Analysis:</strong> Statistical calculations, data manipulation, and automated reporting</li>
+                    <li><strong>Process Optimization:</strong> Workflow automation, error handling, and documentation</li>
+                    <li><strong>Business Impact:</strong> Real-world problem solving with measurable efficiency improvements</li>
+                </ul>
+                <hr/>
+                <h2>Technical Details</h2>
+                <p>The solution processes structured data from a central Excel worksheet, applying automated filtering and statistical analysis to generate request-specific reports. Each report is exported as a separate workbook with embedded charts and consistent formatting, eliminating manual processing steps and reducing task time by over 1200%.</p>
+                <hr/>
+                <h2>Project Significance</h2>
+                <ul style="margin-bottom: 1.5em;">
+                    <li>Demonstrates real-world automation of critical business processes with measurable impact</li>
+                    <li>Showcases advanced VBA programming and Excel automation capabilities</li>
+                    <li>Illustrates the value of process optimization in professional environments</li>
+                </ul>
+                <p><em>Note: Developed as part of my internship at Entegris, demonstrating real-world automation of critical metrology data workflows.</em></p>
+            </div>
+        </div>
+    </div>
     <div id="snake-modal" class="project-modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -444,54 +511,6 @@
                 </ol>
                 <p><strong>Note:</strong> Both files are required—<code>Snake_Game/snake.py</code> imports classes from <code>Snake_Game/snake_game_classes.py</code>.</p>
                 <p><strong>Disclaimer:</strong> This game is a simple educational project and may have some quirks—such as food sometimes appearing near the edge, or the score being displayed at the top. For best results, run it in a standard Python environment with the <code>turtle</code> module installed.</p>
-            </div>
-        </div>
-    </div>
-    <div id="vba-modal" class="project-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="project-header">
-                <div class="header-title-section">
-                    <h1>VBA Data Processing Automation</h1>
-                </div>
-                <p class="project-category">Excel Automation (Entegris, Summer 2025 Intern)</p>
-            </div>
-            
-            <div class="project-image">
-                <img src="img/VBA_Master_Macro.png" alt="VBA Data Processing Automation">
-            </div>
-            
-            <div class="project-description">
-                <h2>Project Overview</h2>
-                <p>During my Summer 2025 Metrology Retention internship at Entegris, I built a suite of VBA macros to automate the processing, analysis, and reporting of structured data from a central Excel worksheet. This solution filters and reshapes raw inputs, calculates key statistics (sums, standard deviations), flags high-variance results, and generates request-specific, color-coded reports with embedded charts—each exported to its own workbook. It reduced the end-to-end task time from about 38 minutes to under 3 minutes, making it over 1200% more efficient.</p>
-                <hr/>
-                <h2>Key Features</h2>
-                <ul style="margin-bottom: 1.5em;">
-                    <li><strong>Data Transformation:</strong> Automated cleaning, filtering, and reshaping of raw datasets into analysis-ready tables</li>
-                    <li><strong>Statistical Analysis:</strong> Computed sums, averages, standard deviations, and variance flags via VBA functions</li>
-                    <li><strong>Dynamic Reporting:</strong> Assembled parameterized reports—formatted with consistent layouts, color coding, and embedded charts</li>
-                    <li><strong>Error Handling:</strong> Implemented validation routines and logging to catch and report data anomalies</li>
-                    <li><strong>Workbook Automation:</strong> Programmatically generated and saved separate workbooks for each report request</li>
-                </ul>
-                <hr/>
-                <h2>Technical Skills</h2>
-                <ul style="margin-bottom: 1.5em;">
-                    <li><strong>VBA Programming:</strong> Advanced Excel automation, object model manipulation, and macro development</li>
-                    <li><strong>Data Analysis:</strong> Statistical calculations, data manipulation, and automated reporting</li>
-                    <li><strong>Process Optimization:</strong> Workflow automation, error handling, and documentation</li>
-                    <li><strong>Business Impact:</strong> Real-world problem solving with measurable efficiency improvements</li>
-                </ul>
-                <hr/>
-                <h2>Technical Details</h2>
-                <p>The solution processes structured data from a central Excel worksheet, applying automated filtering and statistical analysis to generate request-specific reports. Each report is exported as a separate workbook with embedded charts and consistent formatting, eliminating manual processing steps and reducing task time by over 1200%.</p>
-                <hr/>
-                <h2>Project Significance</h2>
-                <ul style="margin-bottom: 1.5em;">
-                    <li>Demonstrates real-world automation of critical business processes with measurable impact</li>
-                    <li>Showcases advanced VBA programming and Excel automation capabilities</li>
-                    <li>Illustrates the value of process optimization in professional environments</li>
-                </ul>
-                <p><em>Note: Developed as part of my internship at Entegris, demonstrating real-world automation of critical metrology data workflows.</em></p>
             </div>
         </div>
     </div>
@@ -650,6 +669,69 @@
                     <li>Demonstrates comprehensive understanding of radio communications and electronics</li>
                     <li>Enables participation in satellite communications and ground station operations</li>
                     <li>Provides foundation for CubeSat communications and emergency response capabilities</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="tip3p-modal" class="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+
+            <div class="project-header">
+                <div class="header-title-section">
+                    <h1>TIP3P Water Box Simulation</h1>
+                    <a href="https://github.com/Ryan-Cooley/TIP3P-Water-Simulation" target="_blank" class="github-link" title="View on GitHub">
+                        <i class="fab fa-github"></i>
+                        <span class="github-text">View Code</span>
+                    </a>
+                </div>
+                <p class="project-category">Python • Molecular Dynamics • Scientific Computing</p>
+            </div>
+
+            <div class="project-image">
+                <img src="img/trajectory.gif" alt="TIP3P Water Box Trajectory">
+            </div>
+
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>
+                    This project simulates the behavior of water molecules at the atomic level to reveal how they self-organize and interact. It provides a complete, end-to-end workflow for molecular dynamics research, demonstrating how to set up a simulation, run it on high-performance computing platforms, and analyze the results. The entire process is automated and reproducible, creating a powerful and accessible tool for computational chemistry.
+                </p>
+                <hr/>
+                <h2>Key Features</h2>
+                <ul style="margin-bottom: 1.5em;">
+                    <li><strong>Accurate Molecular Modeling:</strong> Uses the industry-standard TIP3P water model and advanced simulation techniques (Particle Mesh Ewald) to ensure physically realistic results.</li>
+                    <li><strong>End-to-End Automation:</strong> The entire workflow is scripted, from initial system setup with AmberTools to running the simulation with OpenMM and generating final plots.</li>
+                    <li><strong>Insightful Data Analysis:</strong> Automatically calculates and visualizes key structural properties, like the radial distribution function, to reveal the signature patterns of liquid water.</li>
+                    <li><strong>Reproducible Science:</strong> The project is fully containerized with Docker and includes detailed environment specifications, ensuring that the results are verifiable and consistent.</li>
+                    <li><strong>Extensible Framework:</strong> The modular design makes it easy to adapt the workflow for simulating other molecular systems or exploring new scientific questions.</li>
+                </ul>
+                <hr/>
+                <h2>Technical Skills</h2>
+                <ul style="margin-bottom: 1.5em;">
+                    <li><strong>Python:</strong> Scientific computing (MDTraj, NumPy), data visualization (Matplotlib), and workflow automation.</li>
+                    <li><strong>Molecular Dynamics:</strong> Simulation setup and execution with OpenMM, AmberTools, and industry-standard force fields.</li>
+                    <li><strong>Systems Engineering:</strong> Building automated, end-to-end pipelines for scientific research.</li>
+                    <li><strong>Reproducibility:</strong> Environment management with Conda and containerization with Docker to ensure scientific validity.</li>
+                </ul>
+                <hr/>
+                <h2>Technical Details</h2>
+                <p>
+                    The simulation generates a trajectory file that can be visualized in standard molecular graphics programs like VMD, allowing for an interactive exploration of the results. The analysis scripts produce publication-quality plots that are ready for inclusion in scientific reports.
+                </p>
+                <hr/>
+                <h2>Visualizations</h2>
+                <div class="project-image">
+                    <img src="img/nearest_distances_histogram_waterbox.png" alt="Nearest-Neighbor Distance Histogram" style="max-width:100%; border-radius:8px;">
+                    <p><em><strong>Molecular Spacing:</strong> A histogram of the distances between neighboring oxygen atoms, showing the characteristic 0.28 nm peak that defines the structure of liquid water.</em></p>
+                </div>
+                <hr/>
+                <h2>Project Significance</h2>
+                <ul style="margin-bottom: 1.5em;">
+                    <li>Demonstrates a scalable and automated workflow for complex molecular dynamics simulations.</li>
+                    <li>Highlights a systems-engineering approach to scientific research, from initial setup to final analysis.</li>
+                    <li>Provides a reliable and reproducible template for conducting computational chemistry research with open-source tools.</li>
                 </ul>
             </div>
         </div>

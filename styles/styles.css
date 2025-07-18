@@ -1093,3 +1093,23 @@ section {
     height: 150px;
   }
 }
+
+@media screen and (min-width: 1500px) {
+  .container {
+    max-width: 1600px;
+  }
+  .portfolio-gallery {
+    max-width: 1600px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .portfolio-item .image {
+    height: 450px;
+  }
+  .portfolio-item .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

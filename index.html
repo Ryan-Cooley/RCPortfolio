@@ -125,7 +125,7 @@
             </div>
             <div class="portfolio-item" data-project="sma">
                 <div class="image">
-                    <img src="img/sma_dashboard_SPY_20_50.png" alt="SMA Crossover Backtester">
+                    <img src="img/SMABacktetser.gif" alt="SMA Crossover Backtester Animated Dashboard">
                     <div class="hover-overlay">
                         <h3>SMA Crossover Backtester</h3>
                         <p>Python Quantitative Finance</p>
@@ -311,7 +311,7 @@
           <p class="project-category">Python • Quantitative Finance • Backtesting</p>
         </div>
         <div class="project-image">
-          <img src="img/sma_dashboard_SPY_20_50.png" alt="SMA Crossover Backtester Dashboard">
+          <img src="img/SMABacktetser.gif" alt="SMA Crossover Backtester Animated Dashboard">
         </div>
         <div class="project-description">
           <h2>Project Overview</h2>
@@ -343,18 +343,44 @@
             Functionality is organized into dedicated modules for data loading, indicator computation, signal logic, backtesting, and performance analysis. The suite supports both programmatic imports and CLI execution, and includes a full test suite to ensure reliability. Interactive notebooks enable on‑the‑fly parameter tuning with instant visualization updates.
           </p>
           <hr/>
+          <h2>Code Example</h2>
+          <p>A typical import statement for using the SMA Backtester’s modular API:</p>
+          <pre><code>from sma_backtester import fetch_data, compute_sma, generate_signals, backtest_signals
+</code></pre>
+          <hr/>
           <h2>Visualizations</h2>
           <div class="project-image">
-            <img src="img/sma_dashboard_SPY_20_50.png" alt="SMA Dashboard SPY 20/50" style="max-width:100%; border-radius:8px;">
-            <p><em><strong>Comprehensive Dashboard:</strong> Four‑panel view of price/signals, equity curve, drawdown, and rolling Sharpe for SPY’s 20/50 SMA crossover.</em></p>
+            <pre>
+Running backtest for SPY
+Date range: 2015-01-01 to 2024-01-01
+SMA pair: 20/50
+Initial cash: $100,000
+Transaction cost: 0.0010
+--------------------------------------------------
+Fetched data for SPY from Stooq.
+Results:
+  Cumulative Return: 0.00%
+  Sharpe Ratio:      0.04
+  Max Drawdown:      -0.03%
+  Final Portfolio:   $100,003
+  Total Return:      $3
+  Number of Trades:  92.0
+  Win Rate:          54.55%
+  Data Points:       2264
+            </pre>
+            <p><em><strong>Sample Backtest Output:</strong> Console output from running the SMA 20/50 crossover strategy on SPY (2015–2024).</em></p>
           </div>
           <div class="project-image">
-            <img src="img/sma_dashboard_AAPL_20_50.png" alt="SMA Dashboard AAPL 20/50" style="max-width:100%; border-radius:8px;">
-            <p><em><strong>Multi‑Asset Flexibility:</strong> AAPL dashboard demonstrating adaptability across different tickers.</em></p>
+            <img src="img/sma_dashboard_SPY_20_50.png" alt="SMA Dashboard SPY 20/50 (Static)" style="max-width:100%; border-radius:8px;">
+            <p><em><strong>Comprehensive Dashboard (Static):</strong> Four‑panel view of price/signals, equity curve, drawdown, and rolling Sharpe for SPY’s 20/50 SMA crossover.</em></p>
           </div>
           <div class="project-image">
-            <img src="img/sma_dashboard_QQQ_10_30.png" alt="SMA Dashboard QQQ 10/30" style="max-width:100%; border-radius:8px;">
-            <p><em><strong>Parameter Exploration:</strong> QQQ 10/30 SMA grid search showcasing automated optimization.</em></p>
+            <img src="img/sma_dashboard_AAPL_20_50.png" alt="SMA Dashboard AAPL 20/50 (Static)" style="max-width:100%; border-radius:8px;">
+            <p><em><strong>Multi‑Asset Flexibility (Static):</strong> AAPL dashboard demonstrating adaptability across different tickers.</em></p>
+          </div>
+          <div class="project-image">
+            <img src="img/sma_dashboard_QQQ_10_30.png" alt="SMA Dashboard QQQ 10/30 (Static)" style="max-width:100%; border-radius:8px;">
+            <p><em><strong>Parameter Exploration (Static):</strong> QQQ 10/30 SMA grid search showcasing automated optimization.</em></p>
           </div>
           <hr/>
           <h2>Project Significance</h2>

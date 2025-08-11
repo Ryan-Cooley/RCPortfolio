@@ -7,4 +7,4 @@
     url = https://github.com/Ryan-Cooley/TIP3P-Water-Simulation.git
 [submodule "openmm-vmd-membrane-transport-overview"]
 	path = openmm-vmd-membrane-transport-overview
-	url = ./openmm-vmd-membrane-transport-overview
+	url = https://github.com/Ryan-Cooley/membrane-transport-simulation-overview.git

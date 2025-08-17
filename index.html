@@ -35,25 +35,34 @@
                     <h3>Technical Skills</h3>
                     <div class="skills-content">
                         <div class="skill-category">
-                            <strong>Programming &amp; Automation:</strong> Python (PCEP Certified), C++, Git, VBA
+                            <strong>Programming:</strong> Python (NumPy, pandas, Numba), C++, Git
                         </div>
                         <div class="skill-category">
-                            <strong>Molecular Simulation:</strong> OpenMM, VMD
+                            <strong>Testing/DevOps:</strong> pytest, GitHub Actions (CI), Docker, Black/Flake8
                         </div>
                         <div class="skill-category">
-                            <strong>Astronomical Data:</strong> CIAO, DS9
+                            <strong>Numerical Methods:</strong> Monte Carlo simulation (GBM), Black–Scholes pricing, benchmarking/profiling
                         </div>
                         <div class="skill-category">
-                            <strong>Web &amp; Document:</strong> HTML/CSS/JavaScript, LaTeX
+                            <strong>Data &amp; Visualization:</strong> Jupyter, Matplotlib
                         </div>
                         <div class="skill-category">
-                            <strong>Linux &amp; Security:</strong> Command-line (OverTheWire Bandit)
+                            <strong>Molecular Simulation:</strong> OpenMM, VMD (MD setup, trajectories/analysis)
+                        </div>
+                        <div class="skill-category">
+                            <strong>HPC:</strong> Linux/macOS command line, Slurm job scheduling (salloc, srun)
+                        </div>
+                        <div class="skill-category">
+                            <strong>Astronomy:</strong> CIAO, DS9
+                        </div>
+                        <div class="skill-category">
+                            <strong>Web &amp; Documentation:</strong> HTML/CSS/JavaScript, LaTeX
                         </div>
                     </div>
                 </div>
                 
                 <p>
-                    I’m a Chemical Physics major with a minor in Applied Computational Science at Tufts University, where I use molecular simulations to explore the hidden rules of complex systems. Whether I’m building high-performance code for scientific research, automating data workflows in industry, or leading communications for a CubeSat mission, I thrive at the intersection of curiosity, computation, and practical impact. My work is driven by a systems-thinking mindset—connecting theory, code, and real-world results to solve challenging problems and make research reproducible, reliable, and accessible.
+                    I'm a Chemical Physics major with a minor in Applied Computational Science at Tufts University, where I use molecular simulations to uncover the hidden rules of complex systems. Whether developing high-performance code for research, automating data workflows in industry, or leading communications for the upcoming CubeSat mission, I thrive at the intersection of curiosity, computation, and impact. Guided by a systems-thinking mindset, I connect theory, code, and real-world outcomes to make science and engineering more reproducible, reliable, and accessible.
                 </p>
                 <div class="btn-con">
                     <a href="Ryan_Cooley_Resume_2025.pdf" class="main-btn" target="_blank">
@@ -116,7 +125,7 @@
             </div>
             <div class="portfolio-item" data-project="montecarlo">
                 <div class="image">
-                    <img src="img/pnl_histogram.png" alt="Monte Carlo Option Pricer">
+                    <img src="img/MCplots/iv_surface.png" alt="Monte Carlo Option Pricer">
                     <div class="hover-overlay">
                         <h3>Monte Carlo Option Pricing</h3>
                         <p>Python Quantitative Finance</p>
@@ -138,6 +147,15 @@
                     <div class="hover-overlay">
                         <h3>VBA Data Processing Automation</h3>
                         <p>Excel Automation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-project="openmm-vmd">
+                <div class="image">
+                    <img src="openmm-vmd-membrane-transport-overview/vmdpic.png" alt="OpenMM-VMD Membrane Transport Simulation">
+                    <div class="hover-overlay">
+                        <h3>OpenMM-VMD Membrane Transport</h3>
+                        <p>Molecular Dynamics Research</p>
                     </div>
                 </div>
             </div>
@@ -222,99 +240,106 @@
 
     <div id="montecarlo-modal" class="project-modal">
         <div class="modal-content">
-          <span class="close-modal">&times;</span>
-          <div class="project-header">
-            <div class="header-title-section">
-              <h1>Monte Carlo Option Pricer</h1>
-              <a href="https://github.com/Ryan-Cooley/quant-option-pricer" target="_blank" class="github-link" title="View on GitHub">
-                <i class="fab fa-github"></i>
-                <span class="github-text">View Code</span>
-              </a>
+            <span class="close-modal">&times;</span>
+
+            <div class="project-header">
+                <div class="header-title-section">
+                    <h1>Monte Carlo Option Pricer</h1>
+                    <a href="https://github.com/Ryan-Cooley/quant-option-pricer" target="_blank" class="github-link" title="View on GitHub">
+                        <i class="fab fa-github"></i>
+                        <span class="github-text">View Code</span>
+                    </a>
+                </div>
+                <p class="project-category">Python • Computational Finance • Greeks • Hedging • Risk</p>
             </div>
-            <p class="project-category">Python • Computational Finance • Risk Analysis</p>
-          </div>
-      
-          <div class="project-image">
-            <img src="img/pnl_histogram.png" alt="P&L Distribution with Risk Metrics">
-          </div>
-      
-          <div class="project-description">
-            <h2>Project Overview</h2>
-            <p>
-              This project is a high-performance simulation engine that prices financial options and analyzes their risk. It was built to explore how complex financial instruments behave under real-world uncertainty, making sophisticated quantitative analysis accessible and intuitive. The entire system is automated—from fetching live market data to generating insightful visualizations—creating a seamless, production-ready tool for financial modeling.
-            </p>
-            <hr/>
-            <h2>Key Features</h2>
-            <ul style="margin-bottom: 1.5em;">
-                <li><strong>Live Market Data:</strong> Integrates with Yahoo Finance to pull real-time stock data, ensuring simulations are grounded in current market conditions.</li>
-                <li><strong>High-Speed Computing:</strong> Uses Numba's just-in-time (JIT) compilation to accelerate calculations, enabling large-scale experiments without the long wait times.</li>
-                <li><strong>In-Depth Risk Analysis:</strong> Models and visualizes key risk metrics ("the Greeks") to provide a deeper understanding of how option values respond to market changes.</li>
-                <li><strong>End-to-End Automation:</strong> The workflow is fully automated, from data ingestion to continuous integration with GitHub Actions, ensuring reliability and reproducibility.</li>
-                <li><strong>Clear Visual Storytelling:</strong> Generates intuitive plots that distill complex financial data into easy-to-understand insights, such as profit/loss distributions and risk sensitivities.</li>
-            </ul>
-            <hr/>
-            <h2>Technical Skills</h2>
-            <ul style="margin-bottom: 1.5em;">
-                <li><strong>Python:</strong> Scientific computing (NumPy, Pandas), data visualization (Matplotlib), and automation.</li>
-                <li><strong>Performance Optimization:</strong> Just-in-time (JIT) compilation with Numba for high-speed calculations.</li>
-                <li><strong>Software Engineering:</strong> Object-oriented design, automated testing (Pytest), and CI/CD with GitHub Actions.</li>
-                <li><strong>Reproducibility:</strong> Environment management with Conda and containerization with Docker to ensure consistent results.</li>
-            </ul>
-            <hr/>
-            <h2>Technical Details</h2>
-            <p>
-              The simulation engine can be run via the command line for quick analysis or through a Jupyter Notebook for more interactive and exploratory work. The code is modular and well-documented, making it easy to extend or integrate into other financial analysis platforms.
-            </p>
-            <hr/>
-            <h2>Visualizations</h2>
-            <div class="project-image" style="display:flex; flex-direction:column; align-items:center; justify-content:center; margin-bottom:2em;">
-              <p style="font-size:1.5em; font-weight:800; text-align:center; margin-bottom:0.2em; color:#fff;"><strong>Key Results</strong></p>
-              <div style="text-align:center; font-size:1.08em; margin-bottom:1em; color:#fff;">(MSFT, K=150, T=0.5, r=0.03, 200,000 paths)</div>
-              <table style="margin:0 auto; background:#f6f6f6; border-radius:14px; box-shadow:0 1px 3px rgba(0,0,0,0.06); border-collapse:separate; border-spacing:0; overflow:hidden; min-width:270px; color:#222;">
-                <thead>
-                  <tr><th style="text-align:center; padding:10px 22px; border-bottom:1px solid #ececec; font-weight:700; background:#ededed; color:#222;">Metric</th><th style="text-align:center; padding:10px 22px; border-bottom:1px solid #ececec; font-weight:700; background:#ededed; color:#222;">Value</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td style="padding:10px 22px; text-align:center;">Mean P&amp;L</td><td style="padding:10px 22px; text-align:center;">-0.1052</td></tr>
-                  <tr><td style="padding:10px 22px; text-align:center;">VaR (5%)</td><td style="padding:10px 22px; text-align:center;">15.6921</td></tr>
-                  <tr><td style="padding:10px 22px; text-align:center;">CVaR (5%)</td><td style="padding:10px 22px; text-align:center;">15.6921</td></tr>
-                  <tr><td style="padding:10px 22px; text-align:center;">Δ per $1 move</td><td style="padding:10px 22px; text-align:center;">0.5646</td></tr>
-                  <tr><td style="padding:10px 22px; text-align:center;">Δ accuracy</td><td style="padding:10px 22px; text-align:center;">0.20% error</td></tr>
-                  <tr><td style="padding:10px 22px; text-align:center;">Numba Speedup</td><td style="padding:10px 22px; text-align:center;">100x+</td></tr>
-                </tbody>
-              </table>
-              <p><em><strong>Key Results Table:</strong> Summary of core risk and performance metrics for a representative MSFT call option scenario.</em></p>
-            </div>
+
             <div class="project-image">
-              <img src="img/AAPL_returns.png" alt="AAPL Historical Log-Returns" style="max-width:100%; border-radius:8px;">
-              <p><em><strong>Asset Volatility:</strong> Daily log‑returns for AAPL over one year, used to estimate input volatilities.</em></p>
+                <img src="img/mcplots/iv_surface.png" alt="Implied Volatility Surface (3D)">
             </div>
-            <div class="project-image">
-              <img src="img/convergence_v2.png" alt="Monte Carlo Convergence" style="max-width:100%; border-radius:8px;">
-              <p><em><strong>Simulation Convergence:</strong> The model's price estimate aligns with the analytical price as more simulations are run, validating its accuracy.</em></p>
+
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>
+                    A modular, production-ready engine for pricing European options via Monte Carlo and analyzing their risk.
+                    The system validates against Black–Scholes, estimates Greeks, computes implied volatilities, and evaluates
+                    discrete hedging strategies with full P&amp;L attribution. Built for both reproducibility and speed, it combines
+                    financial modeling with software engineering practices—tests, CI, and performance benchmarks.
+                </p>
+                <hr/>
+                <h2>Key Features</h2>
+                <ul style="margin-bottom: 1.5em;">
+                    <li><strong>Pricing + Validation:</strong> Monte Carlo pricing with convergence diagnostics against Black–Scholes.</li>
+                    <li><strong>Risk &amp; Greeks:</strong> Surfaces for Delta/Vega, VaR/CVaR risk views, and sensitivity analysis.</li>
+                    <li><strong>Implied Volatility:</strong> Robust IV solver with heatmap/surface visualizations.</li>
+                    <li><strong>Hedging:</strong> Delta-hedging backtests, P&amp;L histograms, and hedge frontier analysis.</li>
+                    <li><strong>Performance:</strong> NumPy vectorization + Numba JIT, benchmarked to 1e5–1e6 paths.</li>
+                    <li><strong>Reproducibility:</strong> Deterministic seeds, automated tests (pytest), CI/CD, and Docker environment.</li>
+                </ul>
+                <hr/>
+                <h2>Technical Skills</h2>
+                <ul style="margin-bottom: 1.5em;">
+                    <li><strong>Python:</strong> NumPy, Pandas, Matplotlib for simulation, analysis, and visualization.</li>
+                    <li><strong>Optimization:</strong> High-speed Monte Carlo with Numba JIT acceleration.</li>
+                    <li><strong>Software Engineering:</strong> Modular OOP design, testing, CI with GitHub Actions.</li>
+                    <li><strong>Quantitative Methods:</strong> Risk-neutral pricing, Greeks, implied volatility, and hedging models.</li>
+                </ul>
+                <hr/>
+                <h2>Technical Details</h2>
+                <p>
+                    Simulations generate geometric Brownian motion paths under the risk-neutral measure. Validation compares Monte Carlo
+                    estimates against Black–Scholes closed forms, showing error convergence. Risk modules compute VaR/CVaR directly from
+                    simulated P&amp;L distributions. The IV solver inverts Black–Scholes across a grid of strikes/maturities to produce
+                    smiles and surfaces. Hedging experiments test discrete delta rebalancing policies and plot realized P&amp;L and
+                    hedge efficiency frontiers.
+                </p>
+                <hr/>
+                <h2>Visualizations</h2>
+                <div class="project-image">
+                    <img src="img/mcplots/MSFT_returns.png" alt="MSFT Daily Log-Returns" style="max-width:100%; border-radius:8px;">
+                    <p><em><strong>Market Data:</strong> MSFT daily log-returns used to estimate volatility input, grounding simulations in real market behavior.</em></p>
+                </div>
+                <div class="project-image">
+                    <img src="img/mcplots/convergence_v2.png" alt="Monte Carlo Convergence vs Black–Scholes" style="max-width:100%; border-radius:8px;">
+                    <p><em><strong>Convergence:</strong> Monte Carlo price approaches Black–Scholes as paths increase, validating accuracy and √N error scaling.</em></p>
+                </div>
+                <div class="project-image">
+                    <img src="img/mcplots/iv_heatmap.png" alt="Implied Volatility Heatmap" style="max-width:100%; border-radius:8px;">
+                    <p><em><strong>IV Heatmap:</strong> Implied volatility smile/skew across strikes and maturities.</em></p>
+                </div>
+                <div class="project-image">
+                    <img src="img/mcplots/iv_surface.png" alt="Implied Volatility Surface (3D)" style="max-width:100%; border-radius:8px;">
+                    <p><em><strong>IV Surface:</strong> 3D surface of implied volatility across strike and maturity—reveals wings, skew, and term structure at a glance.</em></p>
+                </div>
+                <div class="project-image">
+                    <img src="img/mcplots/delta_surface.png" alt="Delta Surface" style="max-width:100%; border-radius:8px;">
+                    <p><em><strong>Delta Surface:</strong> Sensitivity of option value to the underlying asset across strike/maturity.</em></p>
+                </div>
+                <div class="project-image">
+                    <img src="img/mcplots/vega_surface.png" alt="Vega Surface" style="max-width:100%; border-radius:8px;">
+                    <p><em><strong>Vega Surface:</strong> Sensitivity of price to volatility changes; peaks near ATM, intermediate maturities.</em></p>
+                </div>
+                <div class="project-image">
+                    <img src="img/mcplots/hedge_pnl.png" alt="Delta-Hedged P&L" style="max-width:100%; border-radius:8px;">
+                    <p><em><strong>Hedged P&amp;L:</strong> Performance of discrete delta-hedging strategy; variance shrinks with hedge quality.</em></p>
+                </div>
+                <div class="project-image">
+                    <img src="img/mcplots/enhanced_risk_analysis.png" alt="Risk Dashboard" style="max-width:100%; border-radius:8px;">
+                    <p><em><strong>Risk Dashboard:</strong> Consolidated exposure and tail metrics for quick stress testing.</em></p>
+                </div>
+                <div class="project-image">
+                    <img src="img/mcplots/benchmark_results.png" alt="Benchmark Results" style="max-width:100%; border-radius:8px;">
+                    <p><em><strong>Benchmarks:</strong> Runtime scaling with path count; Numba acceleration enables large-N pricing.</em></p>
+                </div>
+                <hr/>
+                <h2>Project Significance</h2>
+                <ul style="margin-bottom: 1.5em;">
+                    <li>Demonstrates ability to build scalable, high-performance computational models for finance.</li>
+                    <li>Validates quantitative methods with transparent convergence and risk diagnostics.</li>
+                    <li>Applies software engineering rigor (tests, CI, Docker) for reproducibility and portability.</li>
+                </ul>
             </div>
-            <div class="project-image">
-              <img src="img/pnl_histogram.png" alt="P&L Distribution" style="max-width:100%; border-radius:8px;">
-              <p><em><strong>Risk Distribution:</strong> A histogram of potential profit and loss outcomes, highlighting the range of possibilities and tail risks.</em></p>
-            </div>
-            <div class="project-image">
-              <img src="img/delta_surface.png" alt="Delta Surface" style="max-width:100%; border-radius:8px;">
-              <p><em><strong>System Sensitivity (Delta):</strong> Shows how the option’s value responds to changes in the underlying asset’s price and volatility.</em></p>
-            </div>
-            <div class="project-image">
-              <img src="img/vega_surface.png" alt="Vega Surface" style="max-width:100%; border-radius:8px;">
-              <p><em><strong>System Sensitivity (Vega):</strong> Visualizes how the option’s value responds to changes in volatility, essential for understanding risk.</em></p>
-            </div>
-      
-            <h2>Project Significance</h2>
-            <ul style="margin-bottom: 1.5em;">
-              <li>Demonstrates the ability to build scalable, high-performance computational models for complex systems.</li>
-              <li>Illustrates a systems-thinking approach, from initial data ingestion to automated deployment and analysis.</li>
-              <li>Showcases best practices in reproducible research and modern software engineering.</li>
-            </ul>
-          </div>
         </div>
-      </div>
+    </div>
     <div id="sma-modal" class="project-modal">
       <div class="modal-content">
         <span class="close-modal">&times;</span>
@@ -400,7 +425,7 @@
                         <span class="github-text">View Code</span>
                     </a>
                 </div>
-                <p class="project-category">Excel Automation (Entegris, Summer 2025 Intern)</p>
+                <p class="project-category">Excel Automation (Entegris Internship)</p>
             </div>
             
             <div class="project-image">
@@ -438,6 +463,60 @@
                     <li>Illustrates the value of process optimization in professional environments</li>
                 </ul>
                 <p><em>Note: Developed as part of my internship at Entegris, demonstrating real-world automation of critical metrology data workflows.</em></p>
+            </div>
+        </div>
+    </div>
+    <div id="openmm-vmd-modal" class="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="project-header">
+                <div class="header-title-section">
+                    <h1>OpenMM-VMD Membrane Transport Prototype</h1>
+                    <a href="https://github.com/Ryan-Cooley/membrane-transport-simulation-overview" target="_blank" class="github-link" title="View on GitHub">
+                        <i class="fab fa-github"></i>
+                        <span class="github-text">View Code</span>
+                    </a>
+                </div>
+                <p class="project-category">Computational Methods Prototype (Entegris Internship)</p>
+            </div>
+            
+            <div class="project-image">
+                <img src="openmm-vmd-membrane-transport-overview/vmdpic.png" alt="VMD Simulation Screenshot">
+            </div>
+            
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>This project was developed during my internship at Entegris as an early-stage prototype to explore how custom force fields in OpenMM could model particle transport across a simplified membrane-like barrier. Using Python for simulation setup and VMD for visualization, the system tested whether particles could traverse pores under a downward driving force. Instead of full nonbonded interactions, the model used simplified harmonic restraints, confinement forces, and repulsive walls to enforce geometry and mimic selective transport.</p>
+                <hr/>
+                <h2>Key Features</h2>
+                <ul style="margin-bottom: 1.5em;">
+                    <li><strong>Custom Forces:</strong> Implemented membrane restraints, pore-driving forces, and surface barriers using OpenMM’s Python API</li>
+                    <li><strong>Transport Testing:</strong> Simulated particle motion under applied driving forces to probe pore selectivity.</li>
+                    <li><strong>Prototype Setup:</strong> Established workflows for system construction, equilibration, and trajectory inspection.</li>
+                    <li><strong>Diagnostics:</strong> Monitored system temperature, energy trends, and trajectories in VMD.</li>
+                    <li><strong>Documentation:</strong> Recorded troubleshooting steps and technical choices for reproducibility.</li>
+                </ul>
+                <hr/>
+                <h2>Technical Skills</h2>
+                <ul style="margin-bottom: 1.5em;">
+                    <li><strong>OpenMM:</strong> Force customization, simulation setup, and molecular dynamics control.</li>
+                    <li><strong>Python:</strong> Scientific scripting for OpenMM workflows and analysis.</li>
+                    <li><strong>VMD:</strong> Visualization and qualitative inspection of trajectories.</li>
+                    <li><strong>Force Field Prototyping:</strong> Design of harmonic and repulsive potentials for proof-of-concept systems.</li>
+                    <li><strong>Computational Research Methods:</strong> Iterative problem-solving in applied molecular modeling.</li>
+                </ul>
+                <hr/>
+                <h2>Technical Details</h2>
+                <p>The prototype used a simplified membrane slab built from scratch, stabilized with harmonic restraints and periodic boundary conditions. Transport was driven by a custom directional force, with repulsive walls to block non-pore penetration. This design emphasized geometry-driven selectivity over chemically accurate interactions, serving as a testbed for developing more physics-faithful models in the future.</p>
+                <hr/>
+                <h2>Project Significance</h2>
+                <ul style="margin-bottom: 1.5em;">
+                    <li>Showcases ability to implement custom physics models in OpenMM with Python.</li>
+                    <li>Highlights practical use of molecular simulation tools for engineering R&amp;D.</li>
+                    <li>Serves as a prototype for troubleshooting and methods development.</li>
+                    <li>Builds foundation for refining into fully validated, data-driven membrane transport models.</li>
+                </ul>
+                <p><em>Note: This was a methods-focused prototype project for Entegris. No proprietary data or quantitative results are included here.</em></p>
             </div>
         </div>
     </div>

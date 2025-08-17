@@ -386,11 +386,6 @@
             Functionality is organized into dedicated modules for data loading, indicator computation, signal logic, backtesting, and performance analysis. The suite supports both programmatic imports and CLI execution, and includes a full test suite to ensure reliability. Interactive notebooks enable on‑the‑fly parameter tuning with instant visualization updates.
           </p>
           <hr/>
-          <h2>Code Example</h2>
-          <p>A typical import statement for using the SMA Backtester’s modular API:</p>
-          <pre><code>from sma_backtester import fetch_data, compute_sma, generate_signals, backtest_signals
-</code></pre>
-          <hr/>
           <h2>Visualizations</h2>
           <div class="project-image">
             <img src="img/sma_dashboard_SPY_20_50.png" alt="SMA Dashboard SPY 20/50 (Static)" style="max-width:100%; border-radius:8px;">
@@ -570,49 +565,6 @@
                     <li>Showcases object-oriented design principles in a practical, accessible context.</li>
                     <li>Provides a foundation for understanding game development concepts and user interaction.</li>
                 </ul>
-                <hr/>
-                <h2>Project Structure</h2>
-                <p>The codebase is split into two modules for clarity and maintainability:</p>
-                <hr/>
-                <h3>Main Game File (<code>snake.py</code>)</h3>
-                <p>Entry point to launch the game, containing:</p>
-                <ul>
-                    <li>Setup of the game window and turtle environment</li>
-                    <li>The primary game loop for movement, rendering, and timing</li>
-                    <li>Collision checks and game-over logic</li>
-                    <li>High-score display and reset handling</li>
-                </ul>
-                <hr/>
-                <h3>Classes Module (<code>snake_game_classes.py</code>)</h3>
-                <p>Defines the core game objects:</p>
-                <ul>
-                    <li><strong>Snake:</strong> Manages body segments, directional movement, and self-collision checks</li>
-                    <li><strong>Food:</strong> Randomly places food items on the screen and handles respawning</li>
-                    <li><strong>ScoreBoard:</strong> Keeps track of and renders the player’s score at the top of the screen</li>
-                </ul>
-                <hr/>
-                <h2>Downloads</h2>
-                <div class="download-buttons">
-                    <a href="Snake_Game/snake.py" download class="main-btn">
-                        <span class="btn-text">Download Main Game File</span>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
-                    </a>
-                    <a href="Snake_Game/snake_game_classes.py" download class="main-btn">
-                        <span class="btn-text">Download Classes Module</span>
-                        <span class="btn-icon"><i class="fas fa-download"></i></span>
-                    </a>
-                </div>
-                <hr/>
-                <h2>How to Run</h2>
-                <ol>
-                    <li>Download both <code>Snake_Game/snake.py</code> and <code>Snake_Game/snake_game_classes.py</code></li>
-                    <li>Ensure you have Python 3 installed</li>
-                    <li>Open a terminal or command prompt</li>
-                    <li>Navigate to the folder containing the files</li>
-                    <li>Execute: <code>python Snake_Game/snake.py</code></li>
-                </ol>
-                <p><strong>Note:</strong> Both files are required—<code>Snake_Game/snake.py</code> imports classes from <code>Snake_Game/snake_game_classes.py</code>.</p>
-                <p><strong>Disclaimer:</strong> This game is a simple educational project and may have some quirks—such as food sometimes appearing near the edge, or the score being displayed at the top. For best results, run it in a standard Python environment with the <code>turtle</code> module installed.</p>
             </div>
         </div>
     </div>

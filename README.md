@@ -24,16 +24,53 @@ RCPortfolio/
 ├── .git/                   # Git version control
 ├── .gitignore              # Files and directories to ignore in Git
 ├── .gitmodules             # Git submodule configuration
+├── .DS_Store               # macOS system file
 ├── app.js                  # Main JavaScript file for interactivity
 ├── index.html              # Main HTML file (website structure)
 ├── README.md               # Project README (this file)
-├── Ryan_Cooley_Resume_2025.pdf  # Link to Ryan's resume
+├── Ryan_Cooley_Resume_SWE.pdf  # Ryan's Software Engineering resume
 ├── img/                    # Image assets for the website
+│   ├── MCplots/           # Monte Carlo simulation visualizations
+│   │   ├── benchmark_results.png
+│   │   ├── convergence_v2.png
+│   │   ├── delta_surface.png
+│   │   ├── enhanced_risk_analysis.png
+│   │   ├── hedge_pnl.png
+│   │   ├── iv_heatmap.png
+│   │   ├── iv_surface.png
+│   │   ├── MSFT_returns.png
+│   │   └── vega_surface.png
+│   ├── CallSign.png       # Ham Radio call sign
+│   ├── HamRadioConfirmation.jpg  # Ham Radio license
+│   ├── PCEP Certification.jpg     # Python certification
+│   ├── ryan_pic.jpg       # Profile picture
+│   ├── snake_image.png     # Snake game screenshot
+│   ├── sma_dashboard_AAPL_20_50.png  # SMA backtester results
+│   ├── sma_dashboard_QQQ_10_30.png   # SMA backtester results
+│   ├── sma_dashboard_SPY_20_50.png   # SMA backtester results
+│   ├── SMABacktetser.gif  # SMA backtester animation
+│   ├── sushi_go.jpg       # Sushi Go game screenshot
+│   ├── trajectory.gif      # TIP3P water simulation
+│   ├── VBA_Master_Macro.png  # VBA automation screenshot
+│   └── nearest_distances_histogram_waterbox.png  # Water simulation analysis
 ├── Snake_Game/             # Submodule for the Python Snake Game
 ├── styles/                 # SCSS and compiled CSS files
-├── TIP3P-Water-Sim/        # Submodule for the TIP3P Water Simulation project
-└── VBA_Automation/         # Submodule for the VBA Automation project
+│   ├── _media.scss        # Media query styles
+│   ├── styles.css         # Compiled CSS
+│   ├── styles.css.map     # CSS source map
+│   └── styles.scss        # Main SCSS file
+├── TIP3P-Water-Sim/       # Submodule for the TIP3P Water Simulation project
+├── VBA_Automation/         # Submodule for the VBA Automation project
+└── openmm-vmd-membrane-transport-overview/  # Submodule for membrane transport simulation
 ```
+
+## Submodules
+
+This project uses Git submodules to include external repositories for specific projects:
+
+*   **VBA_Automation:** Excel automation macros and documentation
+*   **TIP3P-Water-Sim:** Molecular dynamics water simulation project
+*   **openmm-vmd-membrane-transport-overview:** Membrane transport simulation prototype
 
 ## How to Run Locally
 

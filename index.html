@@ -105,6 +105,15 @@
             Hover over the projects and accomplishments to see their titles, then click to learn more!
         </p>
         <div class="portfolio-gallery">
+            <div class="portfolio-item" data-project="takeda">
+                <div class="image">
+                    <img src="img/takeda_benchmark_platform.png" alt="ML Model Benchmarking Platform for Protein Structure Prediction">
+                    <div class="hover-overlay">
+                        <h3>Protein Structure Benchmarking Platform</h3>
+                        <p>Machine Learning Pipeline (Takeda)</p>
+                    </div>
+                </div>
+            </div>
             <div class="portfolio-item" data-project="tip3p">
                 <div class="image">
                     <img src="img/trajectory.gif" alt="TIP3P Water Box Simulation">
@@ -390,6 +399,60 @@
           </ul>
         </div>
       </div>
+    </div>
+    <div id="takeda-modal" class="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="project-header">
+                <div class="header-title-section">
+                    <h1>Protein Structure Benchmarking Platform</h1>
+                    <a href="https://github.com/Ryan-Cooley/ml-structure-benchmark-overview" target="_blank" class="github-link" title="View on GitHub">
+                        <i class="fab fa-github"></i>
+                        <span class="github-text">View Code</span>
+                    </a>
+                </div>
+                <p class="project-category">Machine Learning Pipeline Development (Takeda Internship)</p>
+            </div>
+
+            <div class="project-image">
+                <img src="img/takeda_benchmark_platform.png" alt="ML Model Benchmarking Platform for Protein Structure Prediction">
+            </div>
+
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>During my Summer 2026 Machine Learning Pipeline Development internship at Takeda, I built an end-to-end platform for benchmarking state-of-the-art ML models that predict 3D antibody–antigen complex structures (Boltz-2, Chai-1, Protenix, RoseTTAFold3, OpenFold3, and more). Researchers upload a folder of predictions from any model; the platform automatically scores every prediction against experimental ground-truth structures across a broad panel of structural-accuracy metrics, stores the results relationally, and serves them through a live web leaderboard for ranking, filtering, and side-by-side comparison. It replaced a manual, one-model-at-a-time scoring chore with a self-service pipeline—upload → automatic scoring → live leaderboard—wired end-to-end and running in production.</p>
+                <hr/>
+                <h2>Key Features</h2>
+                <ul style="margin-bottom: 1.5em;">
+                    <li><strong>Production job queue with zero queue infrastructure:</strong> no Redis, Celery, or message broker—the queue is a <code>pending</code> status column, and workers claim jobs atomically with <code>SELECT … FOR UPDATE SKIP LOCKED</code>, with crashed-worker recovery, orphan reaping, and mid-run cancellation</li>
+                    <li><strong>Schema-driven, model-agnostic design:</strong> adding a brand-new prediction model—or an entirely new scientific problem type—flows through the storage, API, and UI with zero downstream code changes</li>
+                    <li><strong>General chain-correspondence schema:</strong> a "manifest" resolves which predicted chain maps to which true chain by sequence identity rather than hardcoded position, correctly handling homo-oligomers, missing chains, and mislabeled entries that silently corrupted the old pipeline</li>
+                    <li><strong>Cross-model correctness gate:</strong> cross-checks model-independent invariants (e.g. interface residue counts) across all models to catch a mis-paired structure before its bad numbers reach the leaderboard</li>
+                    <li><strong>Graceful degradation:</strong> a single bad entry becomes an error row instead of crashing a run over thousands of combinations; under-delivered runs are scored for what they delivered and marked partial rather than discarded</li>
+                    <li><strong>5-step upload wizard:</strong> three source modes (local upload via presigned URLs, server-side bucket copy, or reference an existing folder), dry-run preview, and append-to-folder support</li>
+                </ul>
+                <hr/>
+                <h2>Technical Skills</h2>
+                <ul style="margin-bottom: 1.5em;">
+                    <li><strong>Backend & Data Engineering:</strong> FastAPI, PostgreSQL 16 (row-level locking, idempotent migrations, content-hash dedup), SQLite manifest store, relational (vs. blob) metric storage</li>
+                    <li><strong>Distributed Systems:</strong> DB-backed job queue, atomic claim via <code>SKIP LOCKED</code>, systemd-managed workers, embarrassingly-parallel process pools (~3.7× speedup on 8 cores)</li>
+                    <li><strong>Cloud & Infrastructure:</strong> AWS S3, EC2, presigned URLs, boto3, IAM-role-based credentials, cross-virtualenv subprocess orchestration</li>
+                    <li><strong>Frontend:</strong> React 19, Vite, react-router-dom, Plotly (sortable leaderboard, box plots, client-side intersection and mean/std math)</li>
+                    <li><strong>Scientific & ML:</strong> protein structure evaluation (RMSD, GDT, lDDT, TM-score, DockQ), Biopython sequence alignment, ANARCI/IMGT antibody numbering, benchmarking multiple SOTA structure-prediction models</li>
+                </ul>
+                <hr/>
+                <h2>Technical Details</h2>
+                <p>The platform is three connected sub-projects in one repo: a Python <strong>scorer</strong> that computes the metric panel from prediction files vs. ground truth, a Python + PostgreSQL 16 <strong>store and FastAPI</strong> read/write layer, and a React 19 + Vite <strong>SPA</strong>. The metric panel spans global accuracy (Cα RMSD via Kabsch, GDT-TS/HA, lDDT-Cα), per-region metrics (antibody/antigen/CDR-H3 RMSD, interface lDDT), TM-score, and DockQ with its components—plus per-model confidence parsed through a declarative confidence-map system rather than hardcoded per-model parsers. The scorer is manifest-driven, pairs residues by global sequence alignment (Biopython PairwiseAligner) so residue-numbering differences are irrelevant, isolates each entry in a safe wrapper, and parallelizes with <code>ProcessPoolExecutor</code>. Metrics are stored relationally (report → report_row → metric_results, cascade deletes) with per-metric metadata authored by the scorer itself and delivered via a JSON sidecar—so the leaderboard, sort order, and UI are fully data-driven.</p>
+                <hr/>
+                <h2>Project Significance</h2>
+                <ul style="margin-bottom: 1.5em;">
+                    <li><strong>Generality without code churn:</strong> refactored an antibody-specific tool full of hardcoded assumptions into a problem-type-agnostic system where the scorer is the single source of truth and everything downstream follows automatically</li>
+                    <li><strong>Pragmatic infrastructure:</strong> a production-grade job queue built on nothing more than a PostgreSQL status column and <code>SKIP LOCKED</code>—choosing the primitive over the heavy machinery</li>
+                    <li><strong>Trustworthy automation:</strong> cross-model invariant checks, per-entry error isolation, and score-then-classify keep a fully automated, unattended pipeline reliable on messy real-world data</li>
+                </ul>
+                <p><em>Note: Developed during my machine learning pipeline development internship at Takeda. Company names, internal hostnames, and proprietary datasets have been removed—the antibody/antigen domain and public model/metric names shown are open research artifacts.</em></p>
+            </div>
+        </div>
     </div>
     <div id="vba-modal" class="project-modal">
         <div class="modal-content">

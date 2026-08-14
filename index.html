@@ -109,7 +109,7 @@
                 <div class="image">
                     <img src="img/takeda_benchmark_platform.png" alt="ML Model Benchmarking Platform for Protein Structure Prediction">
                     <div class="hover-overlay">
-                        <h3>Protein Structure Benchmarking Platform</h3>
+                        <h3>Model Benchmarking Platform</h3>
                         <p>Machine Learning Pipeline (Takeda)</p>
                     </div>
                 </div>
@@ -405,7 +405,7 @@
             <span class="close-modal">&times;</span>
             <div class="project-header">
                 <div class="header-title-section">
-                    <h1>Protein Structure Benchmarking Platform</h1>
+                    <h1>Model Benchmarking Platform</h1>
                     <a href="https://github.com/Ryan-Cooley/ml-structure-benchmark-overview" target="_blank" class="github-link" title="View on GitHub">
                         <i class="fab fa-github"></i>
                         <span class="github-text">View Code</span>
@@ -420,37 +420,37 @@
 
             <div class="project-description">
                 <h2>Project Overview</h2>
-                <p>During my Summer 2026 Machine Learning Pipeline Development internship at Takeda, I built an end-to-end platform for benchmarking state-of-the-art ML models that predict 3D antibody–antigen complex structures (Boltz-2, Chai-1, Protenix, RoseTTAFold3, OpenFold3, and more). Researchers upload a folder of predictions from any model; the platform automatically scores every prediction against experimental ground-truth structures across a broad panel of structural-accuracy metrics, stores the results relationally, and serves them through a live web leaderboard for ranking, filtering, and side-by-side comparison. It replaced a manual, one-model-at-a-time scoring chore with a self-service pipeline—upload → automatic scoring → live leaderboard—wired end-to-end and running in production.</p>
+                <p>Over Summer 2026 I interned at Takeda as a Machine Learning Pipeline Development Intern, where I built a platform for benchmarking the many ML models that predict 3D antibody-antigen complex structures (Boltz-2, Chai-1, Protenix, RoseTTAFold3, OpenFold3, and others). A researcher uploads a folder of predictions from any model, and the platform scores each one against experimental ground-truth structures across a wide panel of accuracy metrics, saves the results in a database, and shows them on a live leaderboard you can sort, filter, and compare. What used to be a manual chore of scoring one model at a time on the command line is now self-service: upload, walk away, and check the leaderboard. It runs in production.</p>
                 <hr/>
                 <h2>Key Features</h2>
                 <ul style="margin-bottom: 1.5em;">
-                    <li><strong>Production job queue with zero queue infrastructure:</strong> no Redis, Celery, or message broker—the queue is a <code>pending</code> status column, and workers claim jobs atomically with <code>SELECT … FOR UPDATE SKIP LOCKED</code>, with crashed-worker recovery, orphan reaping, and mid-run cancellation</li>
-                    <li><strong>Schema-driven, model-agnostic design:</strong> adding a brand-new prediction model—or an entirely new scientific problem type—flows through the storage, API, and UI with zero downstream code changes</li>
-                    <li><strong>General chain-correspondence schema:</strong> a "manifest" resolves which predicted chain maps to which true chain by sequence identity rather than hardcoded position, correctly handling homo-oligomers, missing chains, and mislabeled entries that silently corrupted the old pipeline</li>
-                    <li><strong>Cross-model correctness gate:</strong> cross-checks model-independent invariants (e.g. interface residue counts) across all models to catch a mis-paired structure before its bad numbers reach the leaderboard</li>
-                    <li><strong>Graceful degradation:</strong> a single bad entry becomes an error row instead of crashing a run over thousands of combinations; under-delivered runs are scored for what they delivered and marked partial rather than discarded</li>
-                    <li><strong>5-step upload wizard:</strong> three source modes (local upload via presigned URLs, server-side bucket copy, or reference an existing folder), dry-run preview, and append-to-folder support</li>
+                    <li><strong>A real job queue with no queue infrastructure.</strong> There is no Redis or Celery here. The queue is just a <code>pending</code> status column, and workers grab jobs with <code>SELECT ... FOR UPDATE SKIP LOCKED</code> so two of them never pick up the same one. It recovers from crashed workers, cleans up orphans, and can cancel a run partway through.</li>
+                    <li><strong>Add a model without touching code.</strong> A new prediction model, or even a whole new kind of scientific problem, flows through the storage, API, and UI on its own, because everything reads from declared metadata instead of hardcoded lists.</li>
+                    <li><strong>Chain matching that survives real data.</strong> The old pipeline assumed a fixed chain layout and quietly produced garbage when reality did not match. I replaced it with a schema that works out which predicted chain maps to which real one by comparing sequences, so homo-oligomers, missing chains, and mislabeled entries all get handled correctly.</li>
+                    <li><strong>A cross-model sanity check.</strong> Some facts about a structure do not depend on the model, like how many residues sit at an interface. If most models agree on a number and one is way off, that model mispaired the structure, and the platform stops its bad numbers before they reach the leaderboard.</li>
+                    <li><strong>It fails softly.</strong> One bad entry becomes an error row instead of killing a run over thousands of combinations, and a model that only finished part of the job still gets scored for what it delivered.</li>
+                    <li><strong>A 5-step upload wizard</strong> with three ways to bring in data (upload from your computer, copy from another bucket, or point at a folder already in storage), a dry-run preview, and the option to add to an existing folder.</li>
                 </ul>
                 <hr/>
                 <h2>Technical Skills</h2>
                 <ul style="margin-bottom: 1.5em;">
-                    <li><strong>Backend & Data Engineering:</strong> FastAPI, PostgreSQL 16 (row-level locking, idempotent migrations, content-hash dedup), SQLite manifest store, relational (vs. blob) metric storage</li>
-                    <li><strong>Distributed Systems:</strong> DB-backed job queue, atomic claim via <code>SKIP LOCKED</code>, systemd-managed workers, embarrassingly-parallel process pools (~3.7× speedup on 8 cores)</li>
-                    <li><strong>Cloud & Infrastructure:</strong> AWS S3, EC2, presigned URLs, boto3, IAM-role-based credentials, cross-virtualenv subprocess orchestration</li>
-                    <li><strong>Frontend:</strong> React 19, Vite, react-router-dom, Plotly (sortable leaderboard, box plots, client-side intersection and mean/std math)</li>
-                    <li><strong>Scientific & ML:</strong> protein structure evaluation (RMSD, GDT, lDDT, TM-score, DockQ), Biopython sequence alignment, ANARCI/IMGT antibody numbering, benchmarking multiple SOTA structure-prediction models</li>
+                    <li><strong>Backend and data:</strong> FastAPI, PostgreSQL 16 with row-level locking, idempotent migrations, and content-hash dedup, plus a small SQLite store for the schema</li>
+                    <li><strong>Distributed work:</strong> a database-backed job queue, atomic claims with <code>SKIP LOCKED</code>, systemd workers, and process pools that hit about 3.7x on 8 cores</li>
+                    <li><strong>Cloud:</strong> AWS S3, EC2, presigned URLs, boto3, and IAM-role credentials</li>
+                    <li><strong>Frontend:</strong> React 19, Vite, react-router-dom, and Plotly for the leaderboard and box plots</li>
+                    <li><strong>Science and ML:</strong> structure evaluation (RMSD, GDT, lDDT, TM-score, DockQ), Biopython sequence alignment, ANARCI/IMGT antibody numbering, and benchmarking of current state-of-the-art models</li>
                 </ul>
                 <hr/>
                 <h2>Technical Details</h2>
-                <p>The platform is three connected sub-projects in one repo: a Python <strong>scorer</strong> that computes the metric panel from prediction files vs. ground truth, a Python + PostgreSQL 16 <strong>store and FastAPI</strong> read/write layer, and a React 19 + Vite <strong>SPA</strong>. The metric panel spans global accuracy (Cα RMSD via Kabsch, GDT-TS/HA, lDDT-Cα), per-region metrics (antibody/antigen/CDR-H3 RMSD, interface lDDT), TM-score, and DockQ with its components—plus per-model confidence parsed through a declarative confidence-map system rather than hardcoded per-model parsers. The scorer is manifest-driven, pairs residues by global sequence alignment (Biopython PairwiseAligner) so residue-numbering differences are irrelevant, isolates each entry in a safe wrapper, and parallelizes with <code>ProcessPoolExecutor</code>. Metrics are stored relationally (report → report_row → metric_results, cascade deletes) with per-metric metadata authored by the scorer itself and delivered via a JSON sidecar—so the leaderboard, sort order, and UI are fully data-driven.</p>
+                <p>The platform is three parts in one repo: a Python scorer that computes the metrics from predictions against ground truth, a Python and PostgreSQL 16 store with a FastAPI layer on top, and a React 19 single-page app. The metrics cover global accuracy (Cα RMSD via Kabsch, GDT-TS/HA, lDDT), per-region numbers (antibody, antigen, and CDR-H3 RMSD, plus interface lDDT), TM-score, and DockQ with its components, along with each model's own confidence scores read through a small mapping instead of a hand-written parser per model. The scorer makes no assumption about which chain is which; it pairs residues by sequence alignment so numbering differences do not matter, wraps each entry so one failure cannot sink the batch, and runs in parallel across processes. Metrics live in the database one row at a time (report, report_row, metric_results, with cascade deletes), and the scorer itself supplies the metadata that drives the leaderboard, sort order, and UI, so adding a new problem type needs no changes on the read side or the frontend.</p>
                 <hr/>
                 <h2>Project Significance</h2>
                 <ul style="margin-bottom: 1.5em;">
-                    <li><strong>Generality without code churn:</strong> refactored an antibody-specific tool full of hardcoded assumptions into a problem-type-agnostic system where the scorer is the single source of truth and everything downstream follows automatically</li>
-                    <li><strong>Pragmatic infrastructure:</strong> a production-grade job queue built on nothing more than a PostgreSQL status column and <code>SKIP LOCKED</code>—choosing the primitive over the heavy machinery</li>
-                    <li><strong>Trustworthy automation:</strong> cross-model invariant checks, per-entry error isolation, and score-then-classify keep a fully automated, unattended pipeline reliable on messy real-world data</li>
+                    <li><strong>It got more general without a pile of new code.</strong> It started as an antibody-specific tool full of hardcoded assumptions, and I reworked it so the scorer is the single source of truth and everything downstream just follows.</li>
+                    <li><strong>The infrastructure stays simple on purpose.</strong> A real job queue on a Postgres status column and <code>SKIP LOCKED</code>, with no broker to run or babysit.</li>
+                    <li><strong>It stays honest on messy data,</strong> thanks to the cross-model checks, the per-entry error isolation, and scoring partial runs instead of throwing them out.</li>
                 </ul>
-                <p><em>Note: Developed during my machine learning pipeline development internship at Takeda. Company names, internal hostnames, and proprietary datasets have been removed—the antibody/antigen domain and public model/metric names shown are open research artifacts.</em></p>
+                <p><em>Note: Built during my internship at Takeda. Company names, internal hostnames, and proprietary datasets have been removed. The antibody/antigen domain and the model and metric names shown are all public research.</em></p>
             </div>
         </div>
     </div>
